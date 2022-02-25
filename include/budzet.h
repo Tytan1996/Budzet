@@ -1,12 +1,14 @@
 #ifndef BUDZET_H
 #define BUDZET_H
 
+#include <iostream>
+
+using namespace std;
 
 class Budzet
 {
     public:
-        Budzet();
-        virtual ~Budzet();
+        char wybierzOpcjeZMenuGlownego();
 
     protected:
 

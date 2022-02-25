@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1645341167 source:d:\projekty\budzet\main.cpp
+	<iostream>
+	"Markup.h"
+
+4293260794 d:\projekty\budzet\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
