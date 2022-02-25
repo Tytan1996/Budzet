@@ -2,11 +2,11 @@
 #define BUDZET_H
 
 
-class budzet
+class Budzet
 {
     public:
-        budzet();
-        virtual ~budzet();
+        Budzet();
+        virtual ~Budzet();
 
     protected:
 

@@ -1,11 +1,11 @@
-#include "budzet.h"
+#include "Budzet.h"
 
-budzet::budzet()
+Budzet::Budzet()
 {
     //ctor
 }
 
-budzet::~budzet()
+Budzet::~Budzet()
 {
     //dtor
 }
