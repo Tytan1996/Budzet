@@ -9,6 +9,7 @@ class Budzet
 {
     public:
         char wybierzOpcjeZMenuGlownego();
+        char wybierzOpcjeZMenuUzytkownika();
 
     protected:
 
