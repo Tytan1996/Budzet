@@ -1,12 +1,15 @@
 #ifndef METODYPOMOCNICZE_H
 #define METODYPOMOCNICZE_H
 
+#include <iostream>
+
+
+using namespace std;
 
 class MetodyPomocnicze
 {
     public:
-        MetodyPomocnicze();
-        virtual ~MetodyPomocnicze();
+        static char wczytajZnak();
 
     protected:
 

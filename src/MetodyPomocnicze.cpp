@@ -1,11 +1,20 @@
 #include "MetodyPomocnicze.h"
 
-MetodyPomocnicze::MetodyPomocnicze()
+char MetodyPomocnicze::wczytajZnak()
 {
-    //ctor
-}
+    string wejscie = "";
+    char znak  = {0};
 
-MetodyPomocnicze::~MetodyPomocnicze()
-{
-    //dtor
+    while (true)
+    {
+        getline(cin, wejscie);
+
+        if (wejscie.length() == 1)
+        {
+            znak = wejscie[0];
+            break;
+        }
+        cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
+    }
+    return znak;
 }

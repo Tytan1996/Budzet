@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1645341167 source:d:\projekty\budzet\main.cpp
+1645815132 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Markup.h"
+	"Budzet.h"
 
 4293260794 d:\projekty\budzet\markup.h
 	<stdlib.h>
@@ -13,5 +14,11 @@
 	"Budzet.h"
 
 1645814960 d:\projekty\budzet\include\budzet.h
+	<iostream>
+
+1645899656 source:d:\projekty\budzet\src\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1645899677 d:\projekty\budzet\include\metodypomocnicze.h
 	<iostream>
 
