@@ -37,8 +37,10 @@
 		<Unit filename="Markup.cpp" />
 		<Unit filename="Markup.h" />
 		<Unit filename="include/Budzet.h" />
+		<Unit filename="include/MetodyPomocnicze.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Budzet.cpp" />
+		<Unit filename="src/MetodyPomocnicze.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

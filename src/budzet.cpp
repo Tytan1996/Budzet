@@ -1,4 +1,5 @@
 #include "Budzet.h"
+#include "MetodyPomocnicze.h"
 
 
 char Budzet::wybierzOpcjeZMenuGlownego()
@@ -13,7 +14,7 @@ char Budzet::wybierzOpcjeZMenuGlownego()
     cout << "9. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    cin >> wybor;
+    wybor=MetodyPomocnicze::wczytajZnak();
 
     return wybor;
 }
@@ -34,7 +35,7 @@ char Budzet::wybierzOpcjeZMenuUzytkownika()
     cout << "7. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    cin >> wybor;
+    wybor=MetodyPomocnicze::wczytajZnak();
 
     return wybor;
 }
