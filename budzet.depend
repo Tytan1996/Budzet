@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1645815132 source:d:\projekty\budzet\main.cpp
+1646248536 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Markup.h"
 	"Budzet.h"
@@ -10,15 +10,23 @@
 	<string>
 	<afx.h>
 
-1645814960 source:d:\projekty\budzet\src\budzet.cpp
+1646248536 source:d:\projekty\budzet\src\budzet.cpp
 	"Budzet.h"
-
-1645814960 d:\projekty\budzet\include\budzet.h
-	<iostream>
-
-1645899656 source:d:\projekty\budzet\src\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1645899677 d:\projekty\budzet\include\metodypomocnicze.h
+1646248536 d:\projekty\budzet\include\budzet.h
+	<iostream>
+
+1646248789 source:d:\projekty\budzet\src\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1646250072 d:\projekty\budzet\include\metodypomocnicze.h
+	<iostream>
+	<sstream>
+
+1646249593 source:d:\projekty\budzet\src\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1646249550 d:\projekty\budzet\include\uzytkownik.h
 	<iostream>
 
