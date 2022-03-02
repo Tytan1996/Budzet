@@ -20,12 +20,13 @@
 1646248789 source:d:\projekty\budzet\src\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1646249043 d:\projekty\budzet\include\metodypomocnicze.h
+1646250072 d:\projekty\budzet\include\metodypomocnicze.h
 	<iostream>
+	<sstream>
 
-1646249043 source:d:\projekty\budzet\src\uzytkownik.cpp
+1646249593 source:d:\projekty\budzet\src\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1646249271 d:\projekty\budzet\include\uzytkownik.h
+1646249550 d:\projekty\budzet\include\uzytkownik.h
 	<iostream>
 
