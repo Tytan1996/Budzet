@@ -10,6 +10,7 @@ class MetodyPomocnicze
 {
     public:
         static char wczytajZnak();
+        static string wczytajLinie();
 
     protected:
 
