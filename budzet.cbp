@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Markup.cpp" />
+		<Unit filename="Markup.h" />
+		<Unit filename="include/Budzet.h" />
+		<Unit filename="include/MetodyPomocnicze.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Budzet.cpp" />
+		<Unit filename="src/MetodyPomocnicze.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
