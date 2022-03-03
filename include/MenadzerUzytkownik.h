@@ -1,16 +1,20 @@
 #ifndef MENADZERUZYTKOWNIK_H
 #define MENADZERUZYTKOWNIK_H
 
+#include <Uzytkownik.h>
+#include <vector>
+
+using namespace std;
+
 
 class MenadzerUzytkownik
 {
     public:
-        MenadzerUzytkownik();
-        virtual ~MenadzerUzytkownik();
 
     protected:
 
     private:
+        vector <Uzytkownik> uzytkownicy;
 };
 
 #endif // MENADZERUZYTKOWNIK_H
