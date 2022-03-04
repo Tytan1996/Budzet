@@ -1,12 +1,16 @@
 #ifndef PLIKZUZYTKOWNIKAMI_H
 #define PLIKZUZYTKOWNIKAMI_H
 
+#include <iostream>
+#include <fstream>
 
-class PlikZUzytkownikami
+#include "Pliki.h"
+
+using namespace std;
+
+class PlikZUzytkownikami:public Pliki
 {
     public:
-        PlikZUzytkownikami();
-        virtual ~PlikZUzytkownikami();
 
     protected:
 
