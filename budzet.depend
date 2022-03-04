@@ -44,3 +44,11 @@
 	<iostream>
 	<fstream>
 
+1646421921 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1646422231 d:\projekty\budzet\include\plikzuzytkownikami.h
+	<iostream>
+	<fstream>
+	"Pliki.h"
+

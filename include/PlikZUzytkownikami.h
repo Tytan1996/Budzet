@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 
+#include "Markup.h"
 #include "Pliki.h"
 
 using namespace std;
@@ -11,6 +12,7 @@ using namespace std;
 class PlikZUzytkownikami:public Pliki
 {
     public:
+        virtual void dopiszDoPliku();
 
     protected:
 
