@@ -37,3 +37,18 @@
 	<Uzytkownik.h>
 	<vector>
 
+1646420979 source:d:\projekty\budzet\src\pliki.cpp
+	"Pliki.h"
+
+1646420975 d:\projekty\budzet\include\pliki.h
+	<iostream>
+	<fstream>
+
+1646421921 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1646422231 d:\projekty\budzet\include\plikzuzytkownikami.h
+	<iostream>
+	<fstream>
+	"Pliki.h"
+
