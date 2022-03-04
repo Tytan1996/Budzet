@@ -38,11 +38,13 @@
 		<Unit filename="Markup.h" />
 		<Unit filename="include/MenadzerUzytkownik.h" />
 		<Unit filename="include/MetodyPomocnicze.h" />
+		<Unit filename="include/Pliki.h" />
 		<Unit filename="include/Uzytkownik.h" />
 		<Unit filename="include/budzet.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/MenadzerUzytkownik.cpp" />
 		<Unit filename="src/MetodyPomocnicze.cpp" />
+		<Unit filename="src/Pliki.cpp" />
 		<Unit filename="src/Uzytkownik.cpp" />
 		<Unit filename="src/budzet.cpp" />
 		<Extensions>
