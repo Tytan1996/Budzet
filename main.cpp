@@ -6,8 +6,17 @@ using namespace std;
 
 int main()
 {
+    char wybor;
     Budzet budzet;
-    budzet.wybierzOpcjeZMenuGlownego();
+    while(true){
+        wybor=budzet.wybierzOpcjeZMenuGlownego();
+        switch(wybor){
+        case '1':
+            budzet.rejestracjaUzytkownika();
+            break;
+        }
+    }
+
 
     return 0;
 }

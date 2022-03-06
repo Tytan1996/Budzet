@@ -39,3 +39,6 @@ char Budzet::wybierzOpcjeZMenuUzytkownika()
 
     return wybor;
 }
+void Budzet::rejestracjaUzytkownika(){
+    menadzerUzytkownik.rejestracjaUzytkownika();
+}

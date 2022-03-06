@@ -1,6 +1,6 @@
 #include "PlikZUzytkownikami.h"
 
-void PlikZUzytkownikami::dopiszDoPliku(){
+void PlikZUzytkownikami::dopiszDoPliku(Uzytkownik uzytkownik){
 
 
     CMarkup xml;
@@ -17,11 +17,11 @@ void PlikZUzytkownikami::dopiszDoPliku(){
     xml.IntoElem();
     xml.AddElem("User");
     xml.IntoElem();
-    xml.AddElem("UserId", "2");
-    xml.AddElem("Login", "bartek");
-    xml.AddElem("Password", "456");
-    xml.AddElem("Name", "456");
-    xml.AddElem("Surname", "456");
+    xml.AddElem("UserId", uzytkownik.pobierzID());
+    xml.AddElem("Login", uzytkownik.pobierzLogin());
+    xml.AddElem("Password", uzytkownik.pobierzHaslo());
+    xml.AddElem("Name", uzytkownik.pobierzName());
+    xml.AddElem("Surname", uzytkownik.pobierzSurname());
 
     xml.Save("users.xml");
 

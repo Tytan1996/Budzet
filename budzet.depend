@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1646248536 source:d:\projekty\budzet\main.cpp
+1646563692 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Markup.h"
 	"Budzet.h"
@@ -10,12 +10,13 @@
 	<string>
 	<afx.h>
 
-1646248536 source:d:\projekty\budzet\src\budzet.cpp
+1646514983 source:d:\projekty\budzet\src\budzet.cpp
 	"Budzet.h"
 	"MetodyPomocnicze.h"
 
-1646248536 d:\projekty\budzet\include\budzet.h
+1646514983 d:\projekty\budzet\include\budzet.h
 	<iostream>
+	"MenadzerUzytkownik.h"
 
 1646251190 source:d:\projekty\budzet\src\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
@@ -24,31 +25,41 @@
 	<iostream>
 	<sstream>
 
-1646251190 source:d:\projekty\budzet\src\uzytkownik.cpp
+1646561664 source:d:\projekty\budzet\src\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1646251190 d:\projekty\budzet\include\uzytkownik.h
+1646513161 d:\projekty\budzet\include\uzytkownik.h
 	<iostream>
 
-1646256466 source:d:\projekty\budzet\src\menadzeruzytkownik.cpp
+1646563807 source:d:\projekty\budzet\src\menadzeruzytkownik.cpp
 	"MenadzerUzytkownik.h"
 
-1646315545 d:\projekty\budzet\include\menadzeruzytkownik.h
-	<Uzytkownik.h>
+1646561897 d:\projekty\budzet\include\menadzeruzytkownik.h
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
 	<vector>
 
-1646420979 source:d:\projekty\budzet\src\pliki.cpp
+1646423367 source:d:\projekty\budzet\src\pliki.cpp
 	"Pliki.h"
 
-1646420975 d:\projekty\budzet\include\pliki.h
+1646513644 d:\projekty\budzet\include\pliki.h
 	<iostream>
 	<fstream>
+	"Uzytkownik.h"
 
-1646421921 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
+1646513450 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1646422231 d:\projekty\budzet\include\plikzuzytkownikami.h
+1646475931 d:\projekty\budzet\include\plikzuzytkownikami.h
 	<iostream>
 	<fstream>
+	"Markup.h"
 	"Pliki.h"
+	"Uzytkownik.h"
+
+1646423367 d:\projekty\budzet\include\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
 

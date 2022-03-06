@@ -6,13 +6,14 @@
 
 #include "Markup.h"
 #include "Pliki.h"
+#include "Uzytkownik.h"
 
 using namespace std;
 
 class PlikZUzytkownikami:public Pliki
 {
     public:
-        virtual void dopiszDoPliku();
+        virtual void dopiszDoPliku(Uzytkownik uzytkownik);
 
     protected:
 

@@ -3,15 +3,14 @@
 
 #include <iostream>
 #include <fstream>
+#include "Uzytkownik.h"
 
 using namespace std;
 
 class Pliki
 {
     public:
-        virtual void dopiszDoPliku()=0;
-        virtual void wyciagnijOdPliku()=0;
-        virtual void poprawDanieWPliku()=0;
+        virtual void dopiszDoPliku(Uzytkownik uzytkownik)=0;
         bool sprawdzCzyPlikIstnieje();
         string pobierzNazwePliku();
 
