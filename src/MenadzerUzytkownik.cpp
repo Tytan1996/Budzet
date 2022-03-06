@@ -8,6 +8,7 @@ void MenadzerUzytkownik::rejestracjaUzytkownika() {
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
 
+
 }
 Uzytkownik MenadzerUzytkownik::podajDaneNowegoUzytkownika() {
     Uzytkownik uzytkownik;

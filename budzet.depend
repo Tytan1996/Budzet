@@ -25,13 +25,13 @@
 	<iostream>
 	<sstream>
 
-1646561664 source:d:\projekty\budzet\src\uzytkownik.cpp
+1646594150 source:d:\projekty\budzet\src\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1646513161 d:\projekty\budzet\include\uzytkownik.h
+1646594150 d:\projekty\budzet\include\uzytkownik.h
 	<iostream>
 
-1646563807 source:d:\projekty\budzet\src\menadzeruzytkownik.cpp
+1646592706 source:d:\projekty\budzet\src\menadzeruzytkownik.cpp
 	"MenadzerUzytkownik.h"
 
 1646561897 d:\projekty\budzet\include\menadzeruzytkownik.h
@@ -39,20 +39,21 @@
 	"PlikZUzytkownikami.h"
 	<vector>
 
-1646423367 source:d:\projekty\budzet\src\pliki.cpp
+1646565410 source:d:\projekty\budzet\src\pliki.cpp
 	"Pliki.h"
 
-1646513644 d:\projekty\budzet\include\pliki.h
+1646565248 d:\projekty\budzet\include\pliki.h
 	<iostream>
 	<fstream>
 	"Uzytkownik.h"
 
-1646513450 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
+1646594150 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1646475931 d:\projekty\budzet\include\plikzuzytkownikami.h
+1646565070 d:\projekty\budzet\include\plikzuzytkownikami.h
 	<iostream>
 	<fstream>
+	<vector>
 	"Markup.h"
 	"Pliki.h"
 	"Uzytkownik.h"

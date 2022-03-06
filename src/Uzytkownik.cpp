@@ -1,5 +1,17 @@
 #include "Uzytkownik.h"
 
+
+Uzytkownik::Uzytkownik(){
+}
+
+Uzytkownik::Uzytkownik(int id,string login,string haslo,string name,string surname){
+    ID=id;
+    this->login=login;
+    this->haslo=haslo;
+    this->name=name;
+    this->surname=surname;
+}
+
 void Uzytkownik::ustawienieID(int nowyID){
     ID=nowyID;
 }

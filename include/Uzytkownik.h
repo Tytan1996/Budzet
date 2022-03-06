@@ -9,6 +9,8 @@ using namespace std;
 class Uzytkownik
 {
     public:
+        Uzytkownik ();
+        Uzytkownik (int id,string login,string haslo,string name,string surname);
         void ustawienieID (int nowyID);
         void ustawienieLoginu(string nowyLogin);
         void ustawienieHaslo(string noweHaslo);

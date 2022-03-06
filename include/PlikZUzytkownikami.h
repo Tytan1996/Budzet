@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 #include "Markup.h"
 #include "Pliki.h"
@@ -14,6 +15,7 @@ class PlikZUzytkownikami:public Pliki
 {
     public:
         virtual void dopiszDoPliku(Uzytkownik uzytkownik);
+        vector<Uzytkownik> wczytajUzytkownikowZPliku();
 
     protected:
 
