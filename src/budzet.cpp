@@ -1,5 +1,8 @@
 #include "Budzet.h"
 
+Budzet::Budzet(string nazwaPlikuZUzytkownikami):menadzerUzytkownika(nazwaPlikuZUzytkownikami){
+
+}
 
 char Budzet::wybierzOpcjeZMenuGlownego()
 {

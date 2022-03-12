@@ -6,16 +6,16 @@
 	<iostream>
 	<sstream>
 
-1647070713 source:d:\projekty\budzet\main.cpp
+1647095866 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Budzet.h"
 
-1647077033 d:\projekty\budzet\include\budzet.h
+1647095879 d:\projekty\budzet\include\budzet.h
 	<iostream>
 	"MenadzerUzytkownika.h"
 	"MetodyPomocnicze.h"
 
-1647077046 d:\projekty\budzet\include\menadzeruzytkownika.h
+1647095866 d:\projekty\budzet\include\menadzeruzytkownika.h
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 	<vector>
@@ -26,7 +26,7 @@
 1647070462 source:d:\projekty\budzet\src\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1647070541 d:\projekty\budzet\include\plikzuzytkownikami.h
+1647096643 d:\projekty\budzet\include\plikzuzytkownikami.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -40,20 +40,20 @@
 	<string>
 	<afx.h>
 
-1647070597 d:\projekty\budzet\include\pliki.h
+1647096250 d:\projekty\budzet\include\pliki.h
 	<iostream>
 	<fstream>
 	"Uzytkownik.h"
 
-1647077033 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
+1647096551 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
 	"MenadzerUzytkownika.h"
 
-1647070597 source:d:\projekty\budzet\src\pliki.cpp
+1647096247 source:d:\projekty\budzet\src\pliki.cpp
 	"Pliki.h"
 
-1647070541 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
+1647096651 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1647076973 source:d:\projekty\budzet\src\budzet.cpp
+1647096531 source:d:\projekty\budzet\src\budzet.cpp
 	"Budzet.h"
 

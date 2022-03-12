@@ -14,6 +14,7 @@ using namespace std;
 class PlikZUzytkownikami:public Pliki
 {
     public:
+        PlikZUzytkownikami(string nazwaPlikuZUzytkownikami);
         virtual void dopiszDoPliku(Uzytkownik uzytkownik);
         vector<Uzytkownik> wczytajUzytkownikowZPliku();
 

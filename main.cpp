@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     char wybor;
-    Budzet budzet;
+    Budzet budzet("users.xml");
 
     while(true){
         wybor=budzet.wybierzOpcjeZMenuGlownego();

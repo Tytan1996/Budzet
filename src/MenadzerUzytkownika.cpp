@@ -1,7 +1,7 @@
 #include "MenadzerUzytkownika.h"
 
 
-MenadzerUzytkownika::MenadzerUzytkownika(){
+MenadzerUzytkownika::MenadzerUzytkownika(string nazwaPlikuZUzytkownikami):plikZUzytkownikami(nazwaPlikuZUzytkownikami){
 
 }
 

@@ -12,14 +12,13 @@ class MenadzerUzytkownika
 {
     vector <Uzytkownik> uzytkownicy;
     public:
-        MenadzerUzytkownika();
+        MenadzerUzytkownika(string nazwaPlikuZUzytkownikami);
         void rejestracjaUzytkownika();
 
     protected:
 
     private:
         PlikZUzytkownikami plikZUzytkownikami;
-
         Uzytkownik podajDaneNowegoUzytkownika();
         int pobierzIdNowegoUzytkownika();
         bool czyIstniejeLogin(string login);

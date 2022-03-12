@@ -10,6 +10,7 @@ using namespace std;
 
 class Budzet {
 public:
+    Budzet(string nazwaPlikuZUzytkownikami);
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
     void rejestracjaUzytkownika();

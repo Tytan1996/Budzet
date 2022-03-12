@@ -1,5 +1,9 @@
 #include "Pliki.h"
 
+Pliki::Pliki(string nazwaPlikuZUzytkownikami):NAZWA_PLIKU(nazwaPlikuZUzytkownikami){
+
+}
+
 string Pliki::pobierzNazwePliku() {
     return NAZWA_PLIKU;
 }
