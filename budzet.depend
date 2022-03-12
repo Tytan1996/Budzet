@@ -71,3 +71,10 @@
 
 1647114913 d:\projekty\budzet\include\menadzerbudzetu.h
 
+1647115200 source:d:\projekty\budzet\src\plikzwydatkami.cpp
+	"PlikZWydatkami.h"
+
+1647115179 d:\projekty\budzet\include\plikzwydatkami.h
+	<iostream>
+	"Pliki.h"
+
