@@ -14,6 +14,8 @@ public:
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
     void rejestracjaUzytkownika();
+    void logowanieUzytkownika();
+    bool czyUzytkownikJestZalogowony();
 
 protected:
 

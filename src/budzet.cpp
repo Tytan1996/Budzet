@@ -44,3 +44,9 @@ char Budzet::wybierzOpcjeZMenuUzytkownika()
 void Budzet::rejestracjaUzytkownika(){
     menadzerUzytkownika.rejestracjaUzytkownika();
 }
+void Budzet::logowanieUzytkownika(){
+    menadzerUzytkownika.logowanieUzytkownika();
+}
+bool Budzet::czyUzytkownikJestZalogowony(){
+    return menadzerUzytkownika.czyUzytkowikJestZalogowany();
+}

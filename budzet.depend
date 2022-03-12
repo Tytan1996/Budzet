@@ -1,23 +1,24 @@
 # depslib dependency file v1.0
-1647069889 source:d:\projekty\budzet\src\metodypomocnicze.cpp
+1647099569 source:d:\projekty\budzet\src\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1647069889 d:\projekty\budzet\include\metodypomocnicze.h
+1647099564 d:\projekty\budzet\include\metodypomocnicze.h
 	<iostream>
 	<sstream>
 
-1647095866 source:d:\projekty\budzet\main.cpp
+1647100921 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Budzet.h"
 
-1647095879 d:\projekty\budzet\include\budzet.h
+1647100910 d:\projekty\budzet\include\budzet.h
 	<iostream>
 	"MenadzerUzytkownika.h"
 	"MetodyPomocnicze.h"
 
-1647095866 d:\projekty\budzet\include\menadzeruzytkownika.h
+1647100984 d:\projekty\budzet\include\menadzeruzytkownika.h
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
+	"MetodyPomocnicze.h"
 	<vector>
 
 1647070462 d:\projekty\budzet\include\uzytkownik.h
@@ -45,15 +46,15 @@
 	<fstream>
 	"Uzytkownik.h"
 
-1647096551 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
+1647100650 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
 	"MenadzerUzytkownika.h"
 
-1647096247 source:d:\projekty\budzet\src\pliki.cpp
+1647096685 source:d:\projekty\budzet\src\pliki.cpp
 	"Pliki.h"
 
 1647096651 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1647096531 source:d:\projekty\budzet\src\budzet.cpp
+1647100930 source:d:\projekty\budzet\src\budzet.cpp
 	"Budzet.h"
 
