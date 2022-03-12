@@ -1,11 +1,4 @@
 #include "MenadzerBudzetu.h"
 
-MenadzerBudzetu::MenadzerBudzetu()
-{
-    //ctor
-}
-
-MenadzerBudzetu::~MenadzerBudzetu()
-{
-    //dtor
+MenadzerBudzetu::MenadzerBudzetu(int idZaloganegoUzytkownika):ID_ZALOGOWANEGO_UZYTKOWNIKA(idZaloganegoUzytkownika){
 }

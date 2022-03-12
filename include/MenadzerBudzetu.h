@@ -5,12 +5,12 @@
 class MenadzerBudzetu
 {
     public:
-        MenadzerBudzetu();
-        virtual ~MenadzerBudzetu();
+        MenadzerBudzetu(int idZaloganegoUzytkownika);
 
     protected:
 
     private:
+        const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
 };
 
 #endif // MENADZERBUDZETU_H
