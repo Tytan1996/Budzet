@@ -1,5 +1,4 @@
 #include "Budzet.h"
-#include "MetodyPomocnicze.h"
 
 
 char Budzet::wybierzOpcjeZMenuGlownego()
@@ -40,5 +39,5 @@ char Budzet::wybierzOpcjeZMenuUzytkownika()
     return wybor;
 }
 void Budzet::rejestracjaUzytkownika(){
-    menadzerUzytkownik.rejestracjaUzytkownika();
+    menadzerUzytkownika.rejestracjaUzytkownika();
 }

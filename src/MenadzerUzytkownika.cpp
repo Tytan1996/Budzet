@@ -1,6 +1,11 @@
-#include "MenadzerUzytkownik.h"
+#include "MenadzerUzytkownika.h"
 
-void MenadzerUzytkownik::rejestracjaUzytkownika() {
+
+MenadzerUzytkownika::MenadzerUzytkownika(){
+
+}
+
+void MenadzerUzytkownika::rejestracjaUzytkownika() {
 
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
     uzytkownicy.push_back(uzytkownik);
@@ -10,7 +15,7 @@ void MenadzerUzytkownik::rejestracjaUzytkownika() {
 
 
 }
-Uzytkownik MenadzerUzytkownik::podajDaneNowegoUzytkownika() {
+Uzytkownik MenadzerUzytkownika::podajDaneNowegoUzytkownika() {
     Uzytkownik uzytkownik;
 
     uzytkownik.ustawienieID(pobierzIdNowegoUzytkownika());
@@ -37,13 +42,13 @@ Uzytkownik MenadzerUzytkownik::podajDaneNowegoUzytkownika() {
     uzytkownik.ustawSurname(surname);
     return uzytkownik;
 }
-int MenadzerUzytkownik::pobierzIdNowegoUzytkownika() {
+int MenadzerUzytkownika::pobierzIdNowegoUzytkownika() {
     if (uzytkownicy.empty() == true)
         return 1;
     else
         return uzytkownicy.back().pobierzID() + 1;
 }
-bool MenadzerUzytkownik::czyIstniejeLogin(string login){
+bool MenadzerUzytkownika::czyIstniejeLogin(string login){
 
     for(int i=0;i<uzytkownicy.size();++i){
         if(uzytkownicy[i].pobierzLogin()==login){

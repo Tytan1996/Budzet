@@ -1,5 +1,5 @@
-#ifndef MENADZERUZYTKOWNIK_H
-#define MENADZERUZYTKOWNIK_H
+#ifndef MENADZERUZYTKOWNIKA_H
+#define MENADZERUZYTKOWNIKA_H
 
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
@@ -8,10 +8,11 @@
 using namespace std;
 
 
-class MenadzerUzytkownik
+class MenadzerUzytkownika
 {
     vector <Uzytkownik> uzytkownicy;
     public:
+        MenadzerUzytkownika();
         void rejestracjaUzytkownika();
 
     protected:
@@ -25,4 +26,4 @@ class MenadzerUzytkownik
 
 };
 
-#endif // MENADZERUZYTKOWNIK_H
+#endif // MENADZERUZYTKOWNIKA_H

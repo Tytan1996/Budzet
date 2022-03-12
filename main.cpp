@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Markup.h"
 #include "Budzet.h"
 
 using namespace std;
@@ -8,6 +7,7 @@ int main()
 {
     char wybor;
     Budzet budzet;
+
     while(true){
         wybor=budzet.wybierzOpcjeZMenuGlownego();
         switch(wybor){
@@ -16,7 +16,5 @@ int main()
             break;
         }
     }
-
-
     return 0;
 }

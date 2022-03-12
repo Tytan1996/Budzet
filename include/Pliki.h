@@ -18,7 +18,7 @@ class Pliki
     protected:
 
     private:
-        const string NAZWA_PLIKU="users.xml";
+        string NAZWA_PLIKU="users.xml";
 };
 
 #endif // PLIKI_H

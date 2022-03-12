@@ -2,21 +2,22 @@
 #define BUDZET_H
 
 #include <iostream>
-#include "MenadzerUzytkownik.h"
+#include "MenadzerUzytkownika.h"
+#include "MetodyPomocnicze.h"
+
 
 using namespace std;
 
-class Budzet
-{
-    public:
-        char wybierzOpcjeZMenuGlownego();
-        char wybierzOpcjeZMenuUzytkownika();
-        void rejestracjaUzytkownika();
+class Budzet {
+public:
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
+    void rejestracjaUzytkownika();
 
-    protected:
+protected:
 
-    private:
-        MenadzerUzytkownik menadzerUzytkownik;
+private:
+    MenadzerUzytkownika menadzerUzytkownika;
 };
 
 #endif // BUDZET_H

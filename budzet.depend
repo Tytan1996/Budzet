@@ -1,56 +1,32 @@
 # depslib dependency file v1.0
-1646563692 source:d:\projekty\budzet\main.cpp
-	<iostream>
-	"Markup.h"
-	"Budzet.h"
-
-4293260794 d:\projekty\budzet\markup.h
-	<stdlib.h>
-	<string.h>
-	<string>
-	<afx.h>
-
-1646514983 source:d:\projekty\budzet\src\budzet.cpp
-	"Budzet.h"
+1647069889 source:d:\projekty\budzet\src\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 
-1646514983 d:\projekty\budzet\include\budzet.h
-	<iostream>
-	"MenadzerUzytkownik.h"
-
-1646251190 source:d:\projekty\budzet\src\metodypomocnicze.cpp
-	"MetodyPomocnicze.h"
-
-1646251190 d:\projekty\budzet\include\metodypomocnicze.h
+1647069889 d:\projekty\budzet\include\metodypomocnicze.h
 	<iostream>
 	<sstream>
 
-1646594150 source:d:\projekty\budzet\src\uzytkownik.cpp
-	"Uzytkownik.h"
-
-1646594150 d:\projekty\budzet\include\uzytkownik.h
+1647070713 source:d:\projekty\budzet\main.cpp
 	<iostream>
+	"Budzet.h"
 
-1646592706 source:d:\projekty\budzet\src\menadzeruzytkownik.cpp
-	"MenadzerUzytkownik.h"
+1647077033 d:\projekty\budzet\include\budzet.h
+	<iostream>
+	"MenadzerUzytkownika.h"
+	"MetodyPomocnicze.h"
 
-1646561897 d:\projekty\budzet\include\menadzeruzytkownik.h
+1647077046 d:\projekty\budzet\include\menadzeruzytkownika.h
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 	<vector>
 
-1646565410 source:d:\projekty\budzet\src\pliki.cpp
-	"Pliki.h"
-
-1646565248 d:\projekty\budzet\include\pliki.h
+1647070462 d:\projekty\budzet\include\uzytkownik.h
 	<iostream>
-	<fstream>
+
+1647070462 source:d:\projekty\budzet\src\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1646594150 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
-	"PlikZUzytkownikami.h"
-
-1646565070 d:\projekty\budzet\include\plikzuzytkownikami.h
+1647070541 d:\projekty\budzet\include\plikzuzytkownikami.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -58,9 +34,26 @@
 	"Pliki.h"
 	"Uzytkownik.h"
 
-1646423367 d:\projekty\budzet\include\markup.h
+4293260794 d:\projekty\budzet\include\markup.h
 	<stdlib.h>
 	<string.h>
 	<string>
 	<afx.h>
+
+1647070597 d:\projekty\budzet\include\pliki.h
+	<iostream>
+	<fstream>
+	"Uzytkownik.h"
+
+1647077033 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
+	"MenadzerUzytkownika.h"
+
+1647070597 source:d:\projekty\budzet\src\pliki.cpp
+	"Pliki.h"
+
+1647070541 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1647076973 source:d:\projekty\budzet\src\budzet.cpp
+	"Budzet.h"
 

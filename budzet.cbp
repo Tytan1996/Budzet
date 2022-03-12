@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="budzet" />
+		<Option title="Budzet" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/budzet" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Budzet" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/budzet" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Budzet" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,23 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Markup.cpp" />
-		<Unit filename="Markup.h" />
-		<Unit filename="include/MenadzerUzytkownik.h" />
+		<Unit filename="include/Budzet.h" />
+		<Unit filename="include/MenadzerUzytkownika.h" />
 		<Unit filename="include/MetodyPomocnicze.h" />
 		<Unit filename="include/PlikZUzytkownikami.h" />
 		<Unit filename="include/Pliki.h" />
 		<Unit filename="include/Uzytkownik.h" />
-		<Unit filename="include/budzet.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/MenadzerUzytkownik.cpp" />
+		<Unit filename="src/Budzet.cpp" />
+		<Unit filename="src/Markup.cpp" />
+		<Unit filename="src/MenadzerUzytkownika.cpp" />
 		<Unit filename="src/MetodyPomocnicze.cpp" />
 		<Unit filename="src/PlikZUzytkownikami.cpp" />
 		<Unit filename="src/Pliki.cpp" />
 		<Unit filename="src/Uzytkownik.cpp" />
-		<Unit filename="src/budzet.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
