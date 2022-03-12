@@ -1,6 +1,8 @@
 #include "Budzet.h"
-#include "MetodyPomocnicze.h"
 
+Budzet::Budzet(string nazwaPlikuZUzytkownikami):menadzerUzytkownika(nazwaPlikuZUzytkownikami){
+
+}
 
 char Budzet::wybierzOpcjeZMenuGlownego()
 {
@@ -38,4 +40,13 @@ char Budzet::wybierzOpcjeZMenuUzytkownika()
     wybor=MetodyPomocnicze::wczytajZnak();
 
     return wybor;
+}
+void Budzet::rejestracjaUzytkownika(){
+    menadzerUzytkownika.rejestracjaUzytkownika();
+}
+void Budzet::logowanieUzytkownika(){
+    menadzerUzytkownika.logowanieUzytkownika();
+}
+bool Budzet::czyUzytkownikJestZalogowony(){
+    return menadzerUzytkownika.czyUzytkowikJestZalogowany();
 }

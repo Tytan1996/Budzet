@@ -9,12 +9,18 @@ using namespace std;
 class Uzytkownik
 {
     public:
+        Uzytkownik ();
+        Uzytkownik (int id,string login,string haslo,string name,string surname);
         void ustawienieID (int nowyID);
         void ustawienieLoginu(string nowyLogin);
         void ustawienieHaslo(string noweHaslo);
+        void ustawName(string noweName);
+        void ustawSurname(string noweSurname);
         int pobierzID();
         string pobierzLogin();
         string pobierzHaslo();
+        string pobierzName();
+        string pobierzSurname();
 
     protected:
 
@@ -22,6 +28,8 @@ class Uzytkownik
         int ID;
         string login;
         string haslo;
+        string name;
+        string surname;
 };
 
 #endif // UZYTKOWNIK_H

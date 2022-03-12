@@ -31,4 +31,9 @@
 *.out
 *.app
 
-/Plan
+
+
+
+Budzet.*
+users.xml
+expenses.xml
