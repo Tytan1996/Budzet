@@ -6,7 +6,7 @@
 	<iostream>
 	<sstream>
 
-1647100921 source:d:\projekty\budzet\main.cpp
+1647101233 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Budzet.h"
 
@@ -46,7 +46,7 @@
 	<fstream>
 	"Uzytkownik.h"
 
-1647100650 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
+1647101037 source:d:\projekty\budzet\src\menadzeruzytkownika.cpp
 	"MenadzerUzytkownika.h"
 
 1647096685 source:d:\projekty\budzet\src\pliki.cpp

@@ -19,6 +19,13 @@ int main()
             case '2':
                 budzet.logowanieUzytkownika();
                 break;
+            case '9':
+                exit(0);
+                break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
             }
         }else{
             wybor=budzet.wybierzOpcjeZMenuUzytkownika();
