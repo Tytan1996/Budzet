@@ -2,11 +2,15 @@
 #define PLIKZWYDATKAMI_H
 
 
-class PlikZWydatkami
+#include <iostream>
+#include "Pliki.h"
+
+using namespace std;
+
+class PlikZWydatkami:public Pliki
 {
     public:
-        PlikZWydatkami();
-        virtual ~PlikZWydatkami();
+        PlikZWydatkami(string nazwaPlikuZWydatkami);
 
     protected:
 

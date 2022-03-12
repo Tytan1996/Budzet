@@ -1,11 +1,4 @@
 #include "PlikZWydatkami.h"
 
-PlikZWydatkami::PlikZWydatkami()
-{
-    //ctor
-}
-
-PlikZWydatkami::~PlikZWydatkami()
-{
-    //dtor
+PlikZWydatkami::PlikZWydatkami(string nazwaPlikuZWydatkami):Pliki(nazwaPlikuZWydatkami){
 }
