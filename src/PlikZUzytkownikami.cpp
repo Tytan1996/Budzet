@@ -9,7 +9,7 @@ void PlikZUzytkownikami::dopiszDoPliku(Uzytkownik uzytkownik){
 
     CMarkup xml;
 
-    bool fileExists = xml.Load( "users.xml" );
+    bool fileExists = xml.Load( pobierzNazwePliku() );
 
     if (!fileExists)
     {
@@ -27,14 +27,14 @@ void PlikZUzytkownikami::dopiszDoPliku(Uzytkownik uzytkownik){
     xml.AddElem("Name", uzytkownik.pobierzName());
     xml.AddElem("Surname", uzytkownik.pobierzSurname());
 
-    xml.Save("users.xml");
+    xml.Save(pobierzNazwePliku());
 
 }
 vector<Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
 {
     CMarkup xml;
     vector <Uzytkownik> uzytkownicy;
-    bool fileExists = xml.Load( "users.xml" );
+    bool fileExists = xml.Load( pobierzNazwePliku() );
     int id;
     string login, haslo, name, surname;
 
