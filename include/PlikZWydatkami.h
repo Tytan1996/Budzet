@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "Pliki.h"
+#include "Wydatek.h"
+#include "Markup.h"
 
 using namespace std;
 
@@ -11,6 +13,7 @@ class PlikZWydatkami:public Pliki
 {
     public:
         PlikZWydatkami(string nazwaPlikuZWydatkami);
+        void dopiszDoPliku(Wydatek wydatek);
 
     protected:
 

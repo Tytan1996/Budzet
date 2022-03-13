@@ -71,10 +71,27 @@
 
 1647114913 d:\projekty\budzet\include\menadzerbudzetu.h
 
-1647115200 source:d:\projekty\budzet\src\plikzwydatkami.cpp
+1647177431 source:d:\projekty\budzet\src\plikzwydatkami.cpp
 	"PlikZWydatkami.h"
 
-1647115179 d:\projekty\budzet\include\plikzwydatkami.h
+1647177396 d:\projekty\budzet\include\plikzwydatkami.h
 	<iostream>
 	"Pliki.h"
+	"Wydatek.h"
+	"Markup.h"
+
+1647116314 source:d:\projekty\budzet\src\wydatki.cpp
+	"Wydatki.h"
+
+1647177202 d:\projekty\budzet\include\wydatki.h
+	<iostream>
+
+1647177382 source:d:\projekty\budzet\src\wydatek.cpp
+	"Wydatek.h"
+
+1647177382 d:\projekty\budzet\include\wydatek.h
+	<iostream>
+
+1647116314 source:d:\projekty\budzet\src\wydatski.cpp
+	"Wydatki.h"
 
