@@ -6,16 +6,17 @@
 	<iostream>
 	<sstream>
 
-1647101691 source:d:\projekty\budzet\main.cpp
+1647178406 source:d:\projekty\budzet\main.cpp
 	<iostream>
 	"Budzet.h"
 
-1647112398 d:\projekty\budzet\include\budzet.h
+1647185094 d:\projekty\budzet\include\budzet.h
 	<iostream>
 	"MenadzerUzytkownika.h"
 	"MetodyPomocnicze.h"
+	"MenadzerBudzetu.h"
 
-1647112398 d:\projekty\budzet\include\menadzeruzytkownika.h
+1647184820 d:\projekty\budzet\include\menadzeruzytkownika.h
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 	"MetodyPomocnicze.h"
@@ -41,7 +42,7 @@
 	<string>
 	<afx.h>
 
-1647112398 d:\projekty\budzet\include\pliki.h
+1647203739 d:\projekty\budzet\include\pliki.h
 	<iostream>
 	<fstream>
 	"Uzytkownik.h"
@@ -55,7 +56,7 @@
 1647109372 source:d:\projekty\budzet\src\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1647112398 source:d:\projekty\budzet\src\budzet.cpp
+1647185094 source:d:\projekty\budzet\src\budzet.cpp
 	"Budzet.h"
 
 1647101691 source:d:\projekty\budzet\src\markup.cpp
@@ -66,15 +67,17 @@
 	<windows.h>
 	<mbstring.h>
 
-1647114913 source:d:\projekty\budzet\src\menadzerbudzetu.cpp
+1647185226 source:d:\projekty\budzet\src\menadzerbudzetu.cpp
 	"MenadzerBudzetu.h"
 
-1647114913 d:\projekty\budzet\include\menadzerbudzetu.h
-
-1647177431 source:d:\projekty\budzet\src\plikzwydatkami.cpp
+1647185569 d:\projekty\budzet\include\menadzerbudzetu.h
+	<iostream>
 	"PlikZWydatkami.h"
 
-1647177396 d:\projekty\budzet\include\plikzwydatkami.h
+1647185448 source:d:\projekty\budzet\src\plikzwydatkami.cpp
+	"PlikZWydatkami.h"
+
+1647185448 d:\projekty\budzet\include\plikzwydatkami.h
 	<iostream>
 	"Pliki.h"
 	"Wydatek.h"

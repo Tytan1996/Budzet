@@ -13,7 +13,7 @@ class PlikZWydatkami:public Pliki
 {
     public:
         PlikZWydatkami(string nazwaPlikuZWydatkami);
-        void dopiszDoPliku(Wydatek wydatek);
+        virtual void dopiszDoPliku(Wydatek wydatek);
 
     protected:
 

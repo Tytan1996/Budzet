@@ -41,7 +41,7 @@
 		<Unit filename="include/PlikZWydatkami.h" />
 		<Unit filename="include/Pliki.h" />
 		<Unit filename="include/Uzytkownik.h" />
-		<Unit filename="include/Wydatki.h" />
+		<Unit filename="include/Wydatek.h" />
 		<Unit filename="include/budzet.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Markup.cpp" />
@@ -52,7 +52,7 @@
 		<Unit filename="src/PlikZWydatkami.cpp" />
 		<Unit filename="src/Pliki.cpp" />
 		<Unit filename="src/Uzytkownik.cpp" />
-		<Unit filename="src/Wydatki.cpp" />
+		<Unit filename="src/Wydatek.cpp" />
 		<Unit filename="src/budzet.cpp" />
 		<Extensions />
 	</Project>
