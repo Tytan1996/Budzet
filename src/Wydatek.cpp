@@ -3,6 +3,9 @@
 void Wydatek::ustawIdWydatku(int nowyIdWydatku){
     idWydatku=nowyIdWydatku;
 }
+void Wydatek::ustawIdUzytkownika(int nowyIdUzytkownika){
+    idUzytkownika=nowyIdUzytkownika;
+}
 void Wydatek::ustawNazweWydatku(string nowaNazwaWydatku){
     nazwaWydatku=nowaNazwaWydatku;
 }
@@ -14,6 +17,9 @@ void Wydatek::ustawKwotewydatku(float nowaKwotaWydatku){
 }
 int Wydatek::pobierzIdWydatku(){
     return idWydatku;
+}
+int Wydatek::pobierzIdUzytkownika(){
+    return idUzytkownika;
 }
 string Wydatek::pobierzNazweWydatku(){
     return nazwaWydatku;

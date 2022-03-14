@@ -10,10 +10,12 @@ class Wydatek
 {
     public:
         void ustawIdWydatku(int nowyIdWydatku);
+        void ustawIdUzytkownika(int nowyIdUzytkownika);
         void ustawNazweWydatku(string nowaNazwaWydatku);
         void ustawDateWydatku(string nowaDataWydatku);
         void ustawKwotewydatku(float nowaKwotaWydatku);
         int pobierzIdWydatku();
+        int pobierzIdUzytkownika();
         string pobierzNazweWydatku();
         string pobierzDateWydatku();
         float pobierzKwoteWydatku();
@@ -22,6 +24,7 @@ class Wydatek
 
     private:
         int idWydatku;
+        int idUzytkownika;
         string nazwaWydatku;
         string dataWydatku;
         float kwotaWydatku;

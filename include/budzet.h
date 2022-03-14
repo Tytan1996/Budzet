@@ -18,6 +18,7 @@ public:
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     bool czyUzytkownikJestZalogowony();
+    void dodajWydatek();
 
 protected:
 
