@@ -34,20 +34,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Budzet.h" />
+		<Unit filename="include/MenadzerBudzetu.h" />
 		<Unit filename="include/MenadzerUzytkownika.h" />
 		<Unit filename="include/MetodyPomocnicze.h" />
 		<Unit filename="include/PlikZUzytkownikami.h" />
+		<Unit filename="include/PlikZWydatkami.h" />
 		<Unit filename="include/Pliki.h" />
 		<Unit filename="include/Uzytkownik.h" />
+		<Unit filename="include/Wydatek.h" />
+		<Unit filename="include/budzet.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Budzet.cpp" />
 		<Unit filename="src/Markup.cpp" />
+		<Unit filename="src/MenadzerBudzetu.cpp" />
 		<Unit filename="src/MenadzerUzytkownika.cpp" />
 		<Unit filename="src/MetodyPomocnicze.cpp" />
 		<Unit filename="src/PlikZUzytkownikami.cpp" />
+		<Unit filename="src/PlikZWydatkami.cpp" />
 		<Unit filename="src/Pliki.cpp" />
 		<Unit filename="src/Uzytkownik.cpp" />
+		<Unit filename="src/Wydatek.cpp" />
+		<Unit filename="src/budzet.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -4,6 +4,8 @@
 #include <iostream>
 #include "MenadzerUzytkownika.h"
 #include "MetodyPomocnicze.h"
+#include "MenadzerBudzetu.h"
+
 
 
 using namespace std;
@@ -21,6 +23,8 @@ protected:
 
 private:
     MenadzerUzytkownika menadzerUzytkownika;
+    MenadzerBudzetu *menadzerBudzetu;
+    const string NAZWA_PLIKU_Z_WYDATKAMI;
 };
 
 #endif // BUDZET_H

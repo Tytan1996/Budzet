@@ -11,7 +11,6 @@ class Pliki
 {
     public:
         Pliki(string nazwaPlikuZUzytkownikami);
-        virtual void dopiszDoPliku(Uzytkownik uzytkownik)=0;
         bool sprawdzCzyPlikIstnieje();
         string pobierzNazwePliku();
 
