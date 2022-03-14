@@ -3,6 +3,7 @@
 
 
 #include <iostream>
+#include <vector>
 #include "Pliki.h"
 #include "Wydatek.h"
 #include "Markup.h"
@@ -13,11 +14,14 @@ class PlikZWydatkami:public Pliki
 {
     public:
         PlikZWydatkami(string nazwaPlikuZWydatkami);
-        virtual void dopiszDoPliku(Wydatek wydatek);
+        void dopiszDoPliku(Wydatek wydatek);
 
     protected:
 
     private:
+        Wydatek wydatek;
+        vector <Wydatek> wydatki;
+
 };
 
 #endif // PLIKZWYDATKAMI_H

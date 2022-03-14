@@ -74,11 +74,12 @@
 	<iostream>
 	"PlikZWydatkami.h"
 
-1647185448 source:d:\projekty\budzet\src\plikzwydatkami.cpp
+1647263141 source:d:\projekty\budzet\src\plikzwydatkami.cpp
 	"PlikZWydatkami.h"
 
-1647185448 d:\projekty\budzet\include\plikzwydatkami.h
+1647263135 d:\projekty\budzet\include\plikzwydatkami.h
 	<iostream>
+	<vector>
 	"Pliki.h"
 	"Wydatek.h"
 	"Markup.h"
