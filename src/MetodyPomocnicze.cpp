@@ -40,4 +40,19 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
     }
     return liczba;
 }
+float MetodyPomocnicze::wczytajLiczbeZPrzecinkiem(){
+    string wejscie = "";
+    float liczba = 0;
 
+    while (true)
+    {
+        getline(cin, wejscie);
+
+        stringstream myStream(wejscie);
+        if (myStream >> liczba)
+            break;
+        cout << "To nie jest liczba. Wpisz ponownie. " << endl;
+    }
+    return liczba;
+
+}

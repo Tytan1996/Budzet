@@ -30,9 +30,15 @@ int main()
         }else{
             wybor=budzet.wybierzOpcjeZMenuUzytkownika();
             switch(wybor){
-            case 2:
+            case '2':
                 budzet.dodajWydatek();
+                break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
             }
+
         }
 
     }

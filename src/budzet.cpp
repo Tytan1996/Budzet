@@ -51,5 +51,5 @@ bool Budzet::czyUzytkownikJestZalogowony(){
     return menadzerUzytkownika.czyUzytkowikJestZalogowany();
 }
 void Budzet::dodajWydatek(){
-    cout<<"dodanio"<<endl;
+    menadzerBudzetu->dodajWydatek();
 }

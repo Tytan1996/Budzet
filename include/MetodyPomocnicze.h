@@ -13,6 +13,7 @@ class MetodyPomocnicze
         static char wczytajZnak();
         static string wczytajLinie();
         static int wczytajLiczbeCalkowita();
+        static float wczytajLiczbeZPrzecinkiem();
 
     protected:
 
