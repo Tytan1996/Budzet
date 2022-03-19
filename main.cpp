@@ -30,6 +30,9 @@ int main()
         }else{
             wybor=budzet.wybierzOpcjeZMenuUzytkownika();
             switch(wybor){
+            case '1':
+                budzet.dodajDochod();
+                break;
             case '2':
                 budzet.dodajWydatek();
                 break;

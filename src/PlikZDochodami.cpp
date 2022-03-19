@@ -5,7 +5,8 @@ PlikZDochodami::PlikZDochodami(string nazwaPlikuZDochodami):Pliki(nazwaPlikuZDoc
 }
 bool PlikZDochodami::dopiszDoPliku(Dochod dochod){
     CMarkup xml;
-    bool fileExists = xml.Load( "incomes.xml");
+    cout<<pobierzNazwePliku()<<endl;
+    bool fileExists = xml.Load(pobierzNazwePliku());
     if (!fileExists)
     {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
@@ -22,7 +23,7 @@ bool PlikZDochodami::dopiszDoPliku(Dochod dochod){
     xml.AddElem("item", dochod.pobierzNazweDochodu());
     xml.AddElem("amount", dochod.pobierzKwoteDochodu());
 
-    xml.Save("incomes.xml");
+    xml.Save(pobierzNazwePliku());
 }
 vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZalogowanieUzytkownika){
     CMarkup xml;

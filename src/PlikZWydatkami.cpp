@@ -5,6 +5,7 @@ PlikZWydatkami::PlikZWydatkami(string nazwaPlikuZWydatkami):Pliki(nazwaPlikuZWyd
 
 bool PlikZWydatkami::dopiszDoPliku(Wydatek wydatek){
     CMarkup xml;
+    cout<<pobierzNazwePliku()<<endl;
     bool fileExists = xml.Load( pobierzNazwePliku() );
     if (!fileExists)
     {

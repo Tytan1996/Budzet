@@ -14,8 +14,9 @@ using namespace std;
 class MenadzerBudzetu
 {
     public:
-        MenadzerBudzetu(string nazwaPlikuZWydatkami, string nazwaPlikuZDochodami,int idZaloganegoUzytkownika);
+        MenadzerBudzetu(string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami,int idZaloganegoUzytkownika);
         void dodajWydatek();
+        void dodajDochod();
 
     protected:
 
@@ -26,7 +27,9 @@ class MenadzerBudzetu
         vector <Wydatek> wydatki;
         vector <Dochod> dochody;
         Wydatek podajDaneNowegoWydatku();
+        Dochod podajDaneNowegoDochodu();
         int pobierzIdNowegoWydatku();
+        int pobierzIdNowegoDochodu();
 
 };
 

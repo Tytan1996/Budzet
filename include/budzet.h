@@ -19,6 +19,7 @@ public:
     void logowanieUzytkownika();
     bool czyUzytkownikJestZalogowony();
     void dodajWydatek();
+    void dodajDochod();
 
 protected:
 

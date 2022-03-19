@@ -17,6 +17,19 @@ void MenadzerBudzetu::dodajWydatek(){
         cout<<"Blad. Nie udalo sie dodac nowego wydatek do pliku. "<<endl;
     system("pause");
 }
+void MenadzerBudzetu::dodajDochod(){
+    Dochod dochod;
+    system("cls");
+    cout << " >>> DODAWANIE NOWY DOCHOD <<<" << endl << endl;
+    dochod = podajDaneNowegoDochodu();
+
+    dochody.push_back(dochod);
+    if(plikZDochodami.dopiszDoPliku(dochod))
+        cout<<"Nowy dodatek zostal dodany" <<endl;
+    else
+        cout<<"Blad. Nie udalo sie dodac nowego dodatku do pliku. "<<endl;
+    system("pause");
+}
 Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     Wydatek wydatek;
     string nazwaWydatku,dataWydatku;
@@ -33,10 +46,32 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     kwota = MetodyPomocnicze::wczytajLiczbeZPrzecinkiem();
 
     wydatek.ustawNazweWydatku(nazwaWydatku);
-    wydatek.ustawDateWydatku(nazwaWydatku);
+    wydatek.ustawDateWydatku(dataWydatku);
     wydatek.ustawKwotewydatku(kwota);
 
     return wydatek;
+}
+Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
+    Dochod dochod;
+    string nazwaDochodu,dataDochodu;
+    float kwota;
+    dochod.ustawIdDochodu(pobierzIdNowegoDochodu());
+    dochod.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+
+    cout << "Podaj nazwa dochodu: ";
+    nazwaDochodu = MetodyPomocnicze::wczytajLinie();
+
+    cout << "Podaj data dochodu: ";
+    dataDochodu = MetodyPomocnicze::wczytajLinie();
+    cout<< "Podaj kwote dochodu: ";
+    kwota = MetodyPomocnicze::wczytajLiczbeZPrzecinkiem();
+
+    dochod.ustawNazweDochodu(nazwaDochodu);
+    dochod.ustawDateDochodu(dataDochodu);
+    dochod.ustawKwoteDochodu(kwota);
+
+    return dochod;
+
 }
 int MenadzerBudzetu::pobierzIdNowegoWydatku() {
     if (wydatki.empty() == true)
@@ -44,4 +79,9 @@ int MenadzerBudzetu::pobierzIdNowegoWydatku() {
     else
         return wydatki.back().pobierzIdWydatku() + 1;
 }
-
+int MenadzerBudzetu::pobierzIdNowegoDochodu() {
+    if (dochody.empty() == true)
+        return 1;
+    else
+        return dochody.back().pobierzIdDochodu() + 1;
+}

@@ -1,6 +1,6 @@
 #include "Budzet.h"
 
-Budzet::Budzet(string nazwaPlikuZUzytkownikami,string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami):menadzerUzytkownika(nazwaPlikuZUzytkownikami),NAZWA_PLIKU_Z_DOCHODAMI(nazwaPlikuZDochodami),NAZWA_PLIKU_Z_WYDATKAMI(nazwaPlikuZDochodami){
+Budzet::Budzet(string nazwaPlikuZUzytkownikami,string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami):menadzerUzytkownika(nazwaPlikuZUzytkownikami),NAZWA_PLIKU_Z_DOCHODAMI(nazwaPlikuZDochodami),NAZWA_PLIKU_Z_WYDATKAMI(nazwaPlikuZWydatkami){
 }
 char Budzet::wybierzOpcjeZMenuGlownego()
 {
@@ -53,4 +53,7 @@ bool Budzet::czyUzytkownikJestZalogowony(){
 }
 void Budzet::dodajWydatek(){
     menadzerBudzetu->dodajWydatek();
+}
+void Budzet::dodajDochod(){
+    menadzerBudzetu->dodajDochod();
 }
