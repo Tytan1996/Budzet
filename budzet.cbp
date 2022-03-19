@@ -37,6 +37,7 @@
 		<Unit filename="include/MenadzerBudzetu.h" />
 		<Unit filename="include/MenadzerUzytkownika.h" />
 		<Unit filename="include/MetodyPomocnicze.h" />
+		<Unit filename="include/PlikZDochodami.h" />
 		<Unit filename="include/PlikZUzytkownikami.h" />
 		<Unit filename="include/PlikZWydatkami.h" />
 		<Unit filename="include/Pliki.h" />
@@ -48,6 +49,7 @@
 		<Unit filename="src/MenadzerBudzetu.cpp" />
 		<Unit filename="src/MenadzerUzytkownika.cpp" />
 		<Unit filename="src/MetodyPomocnicze.cpp" />
+		<Unit filename="src/PlikZDochodami.cpp" />
 		<Unit filename="src/PlikZUzytkownikami.cpp" />
 		<Unit filename="src/PlikZWydatkami.cpp" />
 		<Unit filename="src/Pliki.cpp" />
