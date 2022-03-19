@@ -7,7 +7,6 @@ int main()
 {
     char wybor;
     Budzet budzet("users.xml", "incomes.xml", "expenses.xml");
-
     while(true){
         if (budzet.czyUzytkownikJestZalogowony()==false)
             {

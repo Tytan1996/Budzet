@@ -5,6 +5,8 @@
 #include <sstream>
 #include <ctime>
 #include <iomanip>
+#include <map>
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,6 +18,8 @@ class MetodyPomocnicze
         static int wczytajLiczbeCalkowita();
         static float wczytajLiczbeZPrzecinkiem();
         static string pobierzAktualnaDate();
+        static string pobierzDate();
+        static map<int,int> pobierzIloscDniWMiesiaciu(int rok);
 
     protected:
 

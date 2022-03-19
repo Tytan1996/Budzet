@@ -1,5 +1,4 @@
 #include "MetodyPomocnicze.h"
-
 char MetodyPomocnicze::wczytajZnak()
 {
     string wejscie = "";
@@ -64,6 +63,65 @@ string MetodyPomocnicze::pobierzAktualnaDate(){
     cout.imbue(locale());
     przechowaCzas<<put_time(&tm, "%Y-%m-%d");
     string aktualnaData=przechowaCzas.str();
-    cout<<aktualnaData<<endl;
+    return aktualnaData;
 
+}
+string MetodyPomocnicze::pobierzDate(){
+
+    map <int, int> dni;
+    cout<<"Podaj date od 2000-01-01 (rok-miesiac-dzien)"<<endl;
+    int rok, miesiac, dzien;
+    string data;
+    cout<<"Podaj rok: "<<endl;
+    while(true){
+        rok=wczytajLiczbeCalkowita();
+        if(rok>=2000){
+            break;
+        }
+        system("cls");
+        cout<<"Podaj poprawny rok od roku 2000!"<<endl;
+
+    }
+    cout<<"Podaj miesiac: "<<endl;
+    while(true){
+        miesiac=wczytajLiczbeCalkowita();
+        if(miesiac>0 && miesiac<13){
+            break;
+        }
+        system("cls");
+        cout<<"Podaj poprawny m-ce od 1 do 12!"<<endl;
+    }
+    dni=pobierzIloscDniWMiesiaciu(rok);
+    cout<<"Podaj dzien: "<<endl;
+    while(true){
+        dzien=wczytajLiczbeCalkowita();
+        if(dzien>0 && dzien<=dni[miesiac]){
+            break;
+        }
+        system("cls");
+        cout<<"Podaj poprawny dzien od 1 do "<<dni[miesiac]<<"!"<<endl;
+    }
+    data=to_string(rok)+"-"+to_string(miesiac)+"-"+to_string(dzien);
+    return data;
+
+}
+map <int,int> MetodyPomocnicze::pobierzIloscDniWMiesiaciu(int rok){
+    map<int,int> dniWRoku;
+    dniWRoku[1]=31;
+    if((rok%4==0 && rok%100!=0) || rok%400==0){
+        dniWRoku[2]=29;
+    }else{
+        dniWRoku[2]=28;
+    }
+    dniWRoku[3]=31;
+    dniWRoku[4]=30;
+    dniWRoku[5]=31;
+    dniWRoku[6]=30;
+    dniWRoku[7]=31;
+    dniWRoku[8]=31;
+    dniWRoku[9]=30;
+    dniWRoku[10]=31;
+    dniWRoku[11]=30;
+    dniWRoku[12]=31;
+    return dniWRoku;
 }
