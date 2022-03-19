@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <sstream>
-
+#include <ctime>
+#include <iomanip>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ class MetodyPomocnicze
         static string wczytajLinie();
         static int wczytajLiczbeCalkowita();
         static float wczytajLiczbeZPrzecinkiem();
+        static string pobierzAktualnaDate();
 
     protected:
 

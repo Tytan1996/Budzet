@@ -56,3 +56,14 @@ float MetodyPomocnicze::wczytajLiczbeZPrzecinkiem(){
     return liczba;
 
 }
+string MetodyPomocnicze::pobierzAktualnaDate(){
+
+    stringstream przechowaCzas;
+    time_t t = time(nullptr);
+    tm tm = *localtime(&t);
+    cout.imbue(locale());
+    przechowaCzas<<put_time(&tm, "%Y-%m-%d");
+    string aktualnaData=przechowaCzas.str();
+    cout<<aktualnaData<<endl;
+
+}
