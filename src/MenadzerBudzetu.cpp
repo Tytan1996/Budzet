@@ -1,6 +1,6 @@
 #include "MenadzerBudzetu.h"
 
-MenadzerBudzetu::MenadzerBudzetu(string nazwaPlikuZWydatkami,int idZaloganegoUzytkownika):plikZWydatkami(nazwaPlikuZWydatkami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZaloganegoUzytkownika){
+MenadzerBudzetu::MenadzerBudzetu(string nazwaPlikuZWydatkami,string nazwaPlikuZDochodami,int idZaloganegoUzytkownika):plikZWydatkami(nazwaPlikuZWydatkami),plikZDochodami(nazwaPlikuZDochodami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZaloganegoUzytkownika){
 }
 void MenadzerBudzetu::dodajWydatek(){
     Wydatek wydatek;

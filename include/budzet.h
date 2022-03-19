@@ -12,7 +12,7 @@ using namespace std;
 
 class Budzet {
 public:
-    Budzet(string nazwaPlikuZUzytkownikami);
+    Budzet(string nazwaPlikuZUzytkownikami, string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami);
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
     void rejestracjaUzytkownika();
@@ -26,6 +26,7 @@ private:
     MenadzerUzytkownika menadzerUzytkownika;
     MenadzerBudzetu *menadzerBudzetu;
     const string NAZWA_PLIKU_Z_WYDATKAMI;
+    const string NAZWA_PLIKU_Z_DOCHODAMI;
 };
 
 #endif // BUDZET_H

@@ -1,6 +1,7 @@
 #include "Budzet.h"
 
-Budzet::Budzet(string nazwaPlikuZUzytkownikami):menadzerUzytkownika(nazwaPlikuZUzytkownikami){}
+Budzet::Budzet(string nazwaPlikuZUzytkownikami,string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami):menadzerUzytkownika(nazwaPlikuZUzytkownikami),NAZWA_PLIKU_Z_DOCHODAMI(nazwaPlikuZDochodami),NAZWA_PLIKU_Z_WYDATKAMI(nazwaPlikuZDochodami){
+}
 char Budzet::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
@@ -44,7 +45,7 @@ void Budzet::rejestracjaUzytkownika(){
 void Budzet::logowanieUzytkownika(){
     menadzerUzytkownika.logowanieUzytkownika();
     if(menadzerUzytkownika.czyUzytkowikJestZalogowany()){
-        menadzerBudzetu=new MenadzerBudzetu(NAZWA_PLIKU_Z_WYDATKAMI,menadzerUzytkownika.pobierzIdNowegoUzytkownika());
+        menadzerBudzetu=new MenadzerBudzetu(NAZWA_PLIKU_Z_WYDATKAMI,NAZWA_PLIKU_Z_DOCHODAMI,menadzerUzytkownika.pobierzIdNowegoUzytkownika());
     }
 }
 bool Budzet::czyUzytkownikJestZalogowony(){

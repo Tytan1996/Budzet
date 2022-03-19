@@ -1,6 +1,6 @@
 #include "PlikZWydatkami.h"
 
-PlikZWydatkami::PlikZWydatkami(string nazwaPlikuZWydatkami):Pliki("Wydadki.xml"){
+PlikZWydatkami::PlikZWydatkami(string nazwaPlikuZWydatkami):Pliki(nazwaPlikuZWydatkami){
 }
 
 bool PlikZWydatkami::dopiszDoPliku(Wydatek wydatek){

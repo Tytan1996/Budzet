@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Dochod.h" />
 		<Unit filename="include/MenadzerBudzetu.h" />
 		<Unit filename="include/MenadzerUzytkownika.h" />
 		<Unit filename="include/MetodyPomocnicze.h" />
@@ -45,6 +46,7 @@
 		<Unit filename="include/Wydatek.h" />
 		<Unit filename="include/budzet.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Dochod.cpp" />
 		<Unit filename="src/Markup.cpp" />
 		<Unit filename="src/MenadzerBudzetu.cpp" />
 		<Unit filename="src/MenadzerUzytkownika.cpp" />
