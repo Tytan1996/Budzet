@@ -26,6 +26,7 @@ class MenadzerBudzetu
         vector <Wydatek> wydatki;
         vector <Dochod> dochody;
         Wydatek podajDaneNowegoWydatku();
+        int pobierzIdNowegoWydatku();
 
 };
 

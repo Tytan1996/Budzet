@@ -21,7 +21,7 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     Wydatek wydatek;
     string nazwaWydatku,dataWydatku;
     float kwota;
-    wydatek.ustawIdWydatku(1);
+    wydatek.ustawIdWydatku(pobierzIdNowegoWydatku());
     wydatek.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj nazwa wydatku: ";
@@ -37,5 +37,11 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     wydatek.ustawKwotewydatku(kwota);
 
     return wydatek;
+}
+int MenadzerBudzetu::pobierzIdNowegoWydatku() {
+    if (wydatki.empty() == true)
+        return 1;
+    else
+        return wydatki.back().pobierzIdWydatku() + 1;
 }
 
