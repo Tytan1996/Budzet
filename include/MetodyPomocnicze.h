@@ -17,13 +17,14 @@ class MetodyPomocnicze
         static string wczytajLinie();
         static int wczytajLiczbeCalkowita();
         static float wczytajLiczbeZPrzecinkiem();
-        static string pobierzAktualnaDate();
-        static string pobierzDate();
         static map<int,int> pobierzIloscDniWMiesiaciu(int rok);
+        static string ustawDate();
 
     protected:
 
     private:
+        static string pobierzAktualnaDate();
+        static string pobierzDate();
 };
 
 #endif // METODYPOMOCNICZE_H

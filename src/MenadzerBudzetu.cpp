@@ -41,7 +41,7 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     nazwaWydatku = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj data wydatku: ";
-    dataWydatku = MetodyPomocnicze::wczytajLinie();
+    dataWydatku = MetodyPomocnicze::ustawDate();
     cout<< "Podaj kwote wydatku: ";
     kwota = MetodyPomocnicze::wczytajLiczbeZPrzecinkiem();
 
@@ -62,7 +62,7 @@ Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
     nazwaDochodu = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj data dochodu: ";
-    dataDochodu = MetodyPomocnicze::wczytajLinie();
+    dataDochodu = MetodyPomocnicze::ustawDate();
     cout<< "Podaj kwote dochodu: ";
     kwota = MetodyPomocnicze::wczytajLiczbeZPrzecinkiem();
 

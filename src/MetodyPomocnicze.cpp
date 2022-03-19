@@ -125,3 +125,24 @@ map <int,int> MetodyPomocnicze::pobierzIloscDniWMiesiaciu(int rok){
     dniWRoku[12]=31;
     return dniWRoku;
 }
+string MetodyPomocnicze::ustawDate(){
+    char opcja;
+    string data;
+    cout<<"Jaka date chcesz ustawic?"<<endl;
+    cout<<"1- date z dzisiaj"<<endl;
+    cout<<"2- inna date"<<endl;
+    while(true){
+        opcja=wczytajZnak();
+        switch(opcja){
+        case '1':
+            return pobierzAktualnaDate();
+            break;
+        case '2':
+            return pobierzDate();
+            break;
+        default:
+            cout<<"Nie ma takiej opcji"<<endl;
+            break;
+        }
+    }
+}
