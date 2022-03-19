@@ -1,12 +1,13 @@
 #include "MenadzerBudzetu.h"
 
 MenadzerBudzetu::MenadzerBudzetu(string nazwaPlikuZWydatkami,string nazwaPlikuZDochodami,int idZaloganegoUzytkownika):plikZWydatkami(nazwaPlikuZWydatkami),plikZDochodami(nazwaPlikuZDochodami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZaloganegoUzytkownika){
+    wydatki=plikZWydatkami.wczytajWydatkowZalogowaniegoUzytkownika(idZaloganegoUzytkownika);
 }
 void MenadzerBudzetu::dodajWydatek(){
     Wydatek wydatek;
     system("cls");
     cout << " >>> DODAWANIE NOWEGO WYDATKU <<<" << endl << endl;
-    wydatek = podajDaneNowegoAdresata();
+    wydatek = podajDaneNowegoWydatku();
 
     wydatki.push_back(wydatek);
     if(plikZWydatkami.dopiszDoPliku(wydatek))
@@ -15,7 +16,7 @@ void MenadzerBudzetu::dodajWydatek(){
         cout<<"Blad. Nie udalo sie dodac nowego wydatek do pliku. "<<endl;
     system("pause");
 }
-Wydatek MenadzerBudzetu::podajDaneNowegoAdresata(){
+Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     Wydatek wydatek;
     string nazwaWydatku,dataWydatku;
     float kwota;
@@ -36,3 +37,4 @@ Wydatek MenadzerBudzetu::podajDaneNowegoAdresata(){
 
     return wydatek;
 }
+

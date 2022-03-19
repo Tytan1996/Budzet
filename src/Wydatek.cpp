@@ -1,5 +1,15 @@
 #include "Wydatek.h"
 
+Wydatek::Wydatek(){}
+
+Wydatek::Wydatek(int idWydatku,int idUzytkownika,string nazwaWydatku, string dataWydatku, float kwotaWydatku){
+    this->idWydatku=idWydatku;
+    this->idUzytkownika=idUzytkownika;
+    this->nazwaWydatku=nazwaWydatku;
+    this->dataWydatku=dataWydatku;
+    this->kwotaWydatku=kwotaWydatku;
+}
+
 void Wydatek::ustawIdWydatku(int nowyIdWydatku){
     idWydatku=nowyIdWydatku;
 }

@@ -15,6 +15,7 @@ class PlikZWydatkami:public Pliki
     public:
         PlikZWydatkami(string nazwaPlikuZWydatkami);
         bool dopiszDoPliku(Wydatek wydatek);
+        vector <Wydatek> wczytajWydatkowZalogowaniegoUzytkownika(int idZalogowanieUzytkownika);
 
 
     protected:

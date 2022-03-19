@@ -23,7 +23,7 @@ class MenadzerBudzetu
         PlikZDochodami plikZDochodami;
         const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
         vector <Wydatek> wydatki;
-        Wydatek podajDaneNowegoAdresata();
+        Wydatek podajDaneNowegoWydatku();
 
 };
 

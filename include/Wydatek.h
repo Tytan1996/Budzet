@@ -9,6 +9,8 @@ using namespace std;
 class Wydatek
 {
     public:
+        Wydatek();
+        Wydatek(int idWydatku,int idUzytkownika,string nazwaWydatku, string dataWydatku, float kwotaWydatku);
         void ustawIdWydatku(int nowyIdWydatku);
         void ustawIdUzytkownika(int nowyIdUzytkownika);
         void ustawNazweWydatku(string nowaNazwaWydatku);
