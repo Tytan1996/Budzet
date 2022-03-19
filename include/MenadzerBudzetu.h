@@ -6,6 +6,7 @@
 #include "PlikZWydatkami.h"
 #include "PlikZDochodami.h"
 #include "Wydatek.h"
+#include "Dochod.h"
 #include "MetodyPomocnicze.h"
 
 using namespace std;
@@ -23,6 +24,7 @@ class MenadzerBudzetu
         PlikZDochodami plikZDochodami;
         const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
         vector <Wydatek> wydatki;
+        vector <Dochod> dochody;
         Wydatek podajDaneNowegoWydatku();
 
 };

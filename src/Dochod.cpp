@@ -1,5 +1,14 @@
 #include "Dochod.h"
 
+
+Dochod::Dochod(){}
+Dochod::Dochod(int idDochodu,int idUzytkownika,string nazwaDochodu, string dataDochodu, float kwotaDochodu){
+    this->idDochodu=idDochodu;
+    this->idUzytkownika=idUzytkownika;
+    this->nazwaDochodu=nazwaDochodu;
+    this->dataDochodu=dataDochodu;
+    this->kwotaDochodu=kwotaDochodu;
+}
 void Dochod::ustawIdDochodu(int nowyIdDochodu){
     idDochodu=nowyIdDochodu;
 }

@@ -14,6 +14,7 @@ class PlikZDochodami:public Pliki
     public:
         PlikZDochodami(string nazwaPlikuZDochodami);
         bool dopiszDoPliku(Dochod dochod);
+        vector <Dochod> wczytajDochodyZalogowaniegoUzytkownika(int idZalogowanieUzytkownika);
 
     protected:
 

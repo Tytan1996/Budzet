@@ -8,6 +8,8 @@ using namespace std;
 class Dochod
 {
     public:
+        Dochod();
+        Dochod(int idDochodu,int idUzytkownika,string nazwaDochodu, string dataDochodu, float kwotaDochodu);
         void ustawIdDochodu(int nowyIdDochodu);
         void ustawIdUzytkownika(int nowyIdUzytkownika);
         void ustawNazweDochodu(string nowaNazwaDochodu);

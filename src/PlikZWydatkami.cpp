@@ -55,6 +55,4 @@ vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZ
 
     }
     return wydatki;
-
-
 }

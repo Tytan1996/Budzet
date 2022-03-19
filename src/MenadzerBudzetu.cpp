@@ -2,6 +2,7 @@
 
 MenadzerBudzetu::MenadzerBudzetu(string nazwaPlikuZWydatkami,string nazwaPlikuZDochodami,int idZaloganegoUzytkownika):plikZWydatkami(nazwaPlikuZWydatkami),plikZDochodami(nazwaPlikuZDochodami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZaloganegoUzytkownika){
     wydatki=plikZWydatkami.wczytajWydatkowZalogowaniegoUzytkownika(idZaloganegoUzytkownika);
+    dochody=plikZDochodami.wczytajDochodyZalogowaniegoUzytkownika(idZaloganegoUzytkownika);
 }
 void MenadzerBudzetu::dodajWydatek(){
     Wydatek wydatek;
