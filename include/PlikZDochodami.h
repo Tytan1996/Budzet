@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include "Markup.h"
 #include "Pliki.h"
 #include "Dochod.h"
 
