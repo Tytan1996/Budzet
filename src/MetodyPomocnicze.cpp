@@ -68,42 +68,55 @@ string MetodyPomocnicze::pobierzAktualnaDate(){
 }
 string MetodyPomocnicze::pobierzDate(){
 
-    map <int, int> dni;
-    cout<<"Podaj date od 2000-01-01 (rok-miesiac-dzien)"<<endl;
-    int rok, miesiac, dzien;
-    string data;
-    cout<<"Podaj rok: "<<endl;
+    string data="";
     while(true){
-        rok=wczytajLiczbeCalkowita();
-        if(rok>=2000){
-            break;
+        cout<<"Podaj date od 2000-01-01 (rok-miesiac-dzien)"<<endl;
+        cout<<"Data: ";
+        data=wczytajLinie();
+        data=dodajZeroDoDaty(data);
+        if(sprawdzDate(data)==true){
+            return data;
         }
-        system("cls");
-        cout<<"Podaj poprawny rok od roku 2000!"<<endl;
+        cout<<"Zla data!"<<endl;
+    }
 
-    }
-    cout<<"Podaj miesiac: "<<endl;
-    while(true){
-        miesiac=wczytajLiczbeCalkowita();
-        if(miesiac>0 && miesiac<13){
-            break;
+
+}
+string MetodyPomocnicze::dodajZeroDoDaty(string data){
+    string zero="0";
+    int dlugoscDaty=data.length();
+    if(dlugoscDaty==8){
+        data.insert(5,zero);
+        data.insert(8,zero);
+        return data;
+    }else if(dlugoscDaty==9){
+        if(data[6]=='-'){
+            data.insert(5,zero);
+        }else{
+            data.insert(8,zero);
         }
-        system("cls");
-        cout<<"Podaj poprawny m-ce od 1 do 12!"<<endl;
+        return data;
+    }else{
+        return data;
     }
-    dni=pobierzIloscDniWMiesiaciu(rok);
-    cout<<"Podaj dzien: "<<endl;
-    while(true){
-        dzien=wczytajLiczbeCalkowita();
-        if(dzien>0 && dzien<=dni[miesiac]){
-            break;
-        }
-        system("cls");
-        cout<<"Podaj poprawny dzien od 1 do "<<dni[miesiac]<<"!"<<endl;
-    }
-    data=to_string(rok)+"-"+to_string(miesiac)+"-"+to_string(dzien);
     return data;
-
+}
+bool MetodyPomocnicze::sprawdzDate(string data){
+    if(data.length()!=10){
+        return false;
+    }
+    map <int, int> dni;
+    int rok, miesiac, dzien;
+    rok=atoi(data.substr(0,4).c_str());
+    miesiac=atoi(data.substr(5,2).c_str());
+    dzien=atoi(data.substr(8,2).c_str());
+    dni=pobierzIloscDniWMiesiaciu(rok);
+    if(rok>=2000 && (1<=miesiac && miesiac<=12) && (1<=dzien && dzien<=dni[miesiac])){
+        return true;
+    }else{
+        return false;
+    }
+    return false;
 }
 map <int,int> MetodyPomocnicze::pobierzIloscDniWMiesiaciu(int rok){
     map<int,int> dniWRoku;

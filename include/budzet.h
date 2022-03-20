@@ -22,6 +22,7 @@ public:
     void dodajDochod();
     void pokazBilansZBiezaciegoMiesiaca();
     void pokazBilansZPoprzedniegoMiesiaca();
+    void pokazBilansZOkreslonegoOkresu();
 
 protected:
 

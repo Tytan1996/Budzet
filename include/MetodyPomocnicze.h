@@ -20,12 +20,15 @@ class MetodyPomocnicze
         static map<int,int> pobierzIloscDniWMiesiaciu(int rok);
         static string ustawDate();
         static string pobierzMiesiac();
+        static string pobierzDate();
 
     protected:
 
     private:
         static string pobierzAktualnaDate();
-        static string pobierzDate();
+        static string dodajZeroDoDaty(string data);
+        static bool sprawdzDate(string data);
+
 };
 
 #endif // METODYPOMOCNICZE_H

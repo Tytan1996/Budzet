@@ -63,3 +63,6 @@ void Budzet::pokazBilansZBiezaciegoMiesiaca(){
 void Budzet::pokazBilansZPoprzedniegoMiesiaca(){
     menadzerBudzetu->pokazBilansZPoprzedniegoMiesiaca();
 }
+void Budzet::pokazBilansZOkreslonegoOkresu(){
+    menadzerBudzetu->pokazBilansZOkreslonegoOkresu();
+}

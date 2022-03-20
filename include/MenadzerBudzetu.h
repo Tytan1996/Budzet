@@ -20,6 +20,7 @@ class MenadzerBudzetu
         void dodajDochod();
         void pokazBilansZBiezacegoMiesiaca();
         void pokazBilansZPoprzedniegoMiesiaca();
+        void pokazBilansZOkreslonegoOkresu();
 
     protected:
 
@@ -37,6 +38,8 @@ class MenadzerBudzetu
         void wyswietlDaneDochodu(Dochod dochod);
         bool sprawdzDate(string data);
         bool sprawdzDatePoprzednegoMiesiaca(string data);
+        bool sprawdzOkres(string data,string od,string doKoncaBilansu);
+        string pobierzDate();
 
 };
 

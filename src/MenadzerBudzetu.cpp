@@ -89,7 +89,7 @@ void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
     system("cls");
     if (!wydatki.empty())
     {
-        cout << "             >>> BILANS Z BIEZACEGO MIESIACA <<<" << endl;
+        cout << ">>> BILANS Z BIEZACEGO MIESIACA <<<" << endl;
         cout << "-----------------------------------------------" << endl;
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
@@ -114,7 +114,7 @@ void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
     system("cls");
     if (!wydatki.empty())
     {
-        cout << "             >>> BILANS Z POPRZEDNIEGO MIESIACA <<<" << endl;
+        cout << ">>> BILANS Z POPRZEDNIEGO MIESIACA <<<" << endl;
         cout << "-----------------------------------------------" << endl;
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
@@ -125,6 +125,38 @@ void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
         cout << endl;
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
             if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweDochodu())){
+                wyswietlDaneDochodu(*itr);
+            }
+        }
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    system("pause");
+
+
+}
+void MenadzerBudzetu::pokazBilansZOkreslonegoOkresu(){
+    system("cls");
+    string dataOdPoczatkuBilansu,dataDoKoncaBilasnu;
+    cout<<"Podaj date od jakiego czasu chcesz bilans: ";
+    dataOdPoczatkuBilansu=MetodyPomocnicze::pobierzDate();
+    cout<<"Podaj date do jakiego czasu chcesz bilans: ";
+    dataDoKoncaBilasnu=MetodyPomocnicze::pobierzDate();
+    if (!wydatki.empty())
+    {
+        cout << ">>> BILANS Z POPRZEDNIEGO MIESIACA <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
+        {
+            if(sprawdzOkres(itr->pobierzNazweWydatku(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
+                wyswietlDaneWydatku(*itr);
+            }
+        }
+        cout << endl;
+        for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
+            if(sprawdzOkres(itr->pobierzNazweDochodu(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 wyswietlDaneDochodu(*itr);
             }
         }
@@ -177,3 +209,21 @@ bool MenadzerBudzetu::sprawdzDatePoprzednegoMiesiaca(string data){
         return false;
     }
 }
+bool MenadzerBudzetu::sprawdzOkres(string data,string od,string doKoncaBilansu){
+    int rokOdPoczatkuBilansu=atoi(od.substr(0,4).c_str());
+    int miesiacOdPoczatkuBilansu=atoi(od.substr(5,6).c_str());
+    int dzienOdPoczatkuBilansu=atoi(od.substr(8,9).c_str());
+    int rokDoKoncaBilansu=atoi(doKoncaBilansu.substr(0,4).c_str());
+    int miesiacDoKoncaBilansu=atoi(doKoncaBilansu.substr(5,6).c_str());
+    int dzienDoKoncaBilansu=atoi(doKoncaBilansu.substr(8,9).c_str());
+    int rok=atoi(data.substr(0,4).c_str());
+    int miesiac=atoi(data.substr(5,6).c_str());
+    int dzien=atoi(data.substr(8,9).c_str());
+    if((rokOdPoczatkuBilansu<=rok && rok<=rokDoKoncaBilansu) && (miesiacOdPoczatkuBilansu<=miesiac && miesiac<=miesiacDoKoncaBilansu)&& (dzienOdPoczatkuBilansu<=dzien && dzien<=dzienDoKoncaBilansu)){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
