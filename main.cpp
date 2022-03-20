@@ -44,8 +44,12 @@ int main()
             case '5':
                 budzet.pokazBilansZOkreslonegoOkresu();
                 break;
+            case '6':
+                budzet.zmianaHaslaZalogowanegoUzytkownika();
+                break;
             case '7':
                 budzet.wylogowanieUzytkownika();
+                break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
                 system("pause");

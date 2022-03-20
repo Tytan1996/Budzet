@@ -60,3 +60,17 @@ vector<Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
     }
     return uzytkownicy;
 }
+void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy){
+
+    CMarkup xml;
+
+    bool fileExists = xml.Load( pobierzNazwePliku() );
+    if (fileExists){
+        remove(pobierzNazwePliku().c_str());
+    }
+
+    for(vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++){
+        dopiszDoPliku(*itr);
+    }
+
+}

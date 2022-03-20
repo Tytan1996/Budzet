@@ -66,6 +66,9 @@ void Budzet::pokazBilansZPoprzedniegoMiesiaca(){
 void Budzet::pokazBilansZOkreslonegoOkresu(){
     menadzerBudzetu->pokazBilansZOkreslonegoOkresu();
 }
+void Budzet::zmianaHaslaZalogowanegoUzytkownika(){
+    menadzerUzytkownika.zmianaHaslaZalogowanegoUzytkownika();
+}
 void Budzet::wylogowanieUzytkownika(){
     menadzerUzytkownika.wylogowanieUzytkownika();
     delete menadzerBudzetu;

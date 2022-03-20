@@ -100,6 +100,22 @@ bool MenadzerUzytkownika::czyUzytkowikJestZalogowany(){
     else
         return false;
 }
+void MenadzerUzytkownika::zmianaHaslaZalogowanegoUzytkownika(){
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = MetodyPomocnicze::wczytajLinie();
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr -> pobierzID() == idZalogowanegoUzytkownika)
+        {
+            itr -> ustawienieHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+
+}
 void MenadzerUzytkownika::wylogowanieUzytkownika(){
     idZalogowanegoUzytkownika=0;
 }
