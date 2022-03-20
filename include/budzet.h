@@ -21,6 +21,7 @@ public:
     void dodajWydatek();
     void dodajDochod();
     void pokazBilansZBiezaciegoMiesiaca();
+    void pokazBilansZPoprzedniegoMiesiaca();
 
 protected:
 

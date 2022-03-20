@@ -38,6 +38,9 @@ int main()
             case '3':
                 budzet.pokazBilansZBiezaciegoMiesiaca();
                 break;
+            case '4':
+                budzet.pokazBilansZPoprzedniegoMiesiaca();
+                break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
                 system("pause");

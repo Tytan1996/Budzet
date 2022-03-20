@@ -60,3 +60,6 @@ void Budzet::dodajDochod(){
 void Budzet::pokazBilansZBiezaciegoMiesiaca(){
     menadzerBudzetu->pokazBilansZBiezacegoMiesiaca();
 }
+void Budzet::pokazBilansZPoprzedniegoMiesiaca(){
+    menadzerBudzetu->pokazBilansZPoprzedniegoMiesiaca();
+}

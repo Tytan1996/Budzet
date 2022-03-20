@@ -19,6 +19,7 @@ class MenadzerBudzetu
         void dodajWydatek();
         void dodajDochod();
         void pokazBilansZBiezacegoMiesiaca();
+        void pokazBilansZPoprzedniegoMiesiaca();
 
     protected:
 
@@ -35,6 +36,7 @@ class MenadzerBudzetu
         void wyswietlDaneWydatku(Wydatek wydatek);
         void wyswietlDaneDochodu(Dochod dochod);
         bool sprawdzDate(string data);
+        bool sprawdzDatePoprzednegoMiesiaca(string data);
 
 };
 

@@ -110,6 +110,33 @@ void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
     }
     system("pause");
 }
+void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
+    system("cls");
+    if (!wydatki.empty())
+    {
+        cout << "             >>> BILANS Z POPRZEDNIEGO MIESIACA <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
+        {
+            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweWydatku())){
+                wyswietlDaneWydatku(*itr);
+            }
+        }
+        cout << endl;
+        for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
+            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweDochodu())){
+                wyswietlDaneDochodu(*itr);
+            }
+        }
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    system("pause");
+
+
+}
 void MenadzerBudzetu::wyswietlDaneWydatku(Wydatek wydatek)
 {
     cout << endl << "Id wydatku:    " << wydatek.pobierzIdWydatku()<< endl;
@@ -127,6 +154,23 @@ void MenadzerBudzetu::wyswietlDaneDochodu(Dochod dochod)
 bool MenadzerBudzetu::sprawdzDate(string data){
     string aktualnyMiesiac=MetodyPomocnicze::pobierzMiesiac();
     int pozycjaSzukaniegoFragemtu=data.find(aktualnyMiesiac);
+    if(pozycjaSzukaniegoFragemtu!=string::npos){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool MenadzerBudzetu::sprawdzDatePoprzednegoMiesiaca(string data){
+    string aktualnyMiesiac=MetodyPomocnicze::pobierzMiesiac();
+    int poprzednyMiesica=atoi(aktualnyMiesiac.substr(5,2).c_str())+1;
+    string miesiac="";
+    if(poprzednyMiesica<10){
+        miesiac="0"+to_string(poprzednyMiesica);
+    }else{
+        miesiac=to_string(poprzednyMiesica);
+    }
+    string poprzednyMiesiac=aktualnyMiesiac.replace(5,2,miesiac);
+    int pozycjaSzukaniegoFragemtu=data.find(poprzednyMiesiac);
     if(pozycjaSzukaniegoFragemtu!=string::npos){
         return true;
     }else{
