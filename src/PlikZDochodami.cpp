@@ -15,7 +15,7 @@ bool PlikZDochodami::dopiszDoPliku(Dochod dochod){
 
     xml.FindElem();
     xml.IntoElem();
-    xml.AddElem("Incomes");
+    xml.AddElem("Income");
     xml.IntoElem();
     xml.AddElem("incomeId", dochod.pobierzIdDochodu());
     xml.AddElem("userId", dochod.pobierzIdUzytkownika());
@@ -37,7 +37,7 @@ vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZal
     {
         xml.FindElem();
         xml.IntoElem();
-        while(xml.FindElem("Expenses")){
+        while(xml.FindElem("Income")){
             xml.FindChildElem();
             idDochodu=atoi(xml.GetChildData().c_str());
             xml.FindChildElem();

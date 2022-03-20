@@ -15,7 +15,7 @@ bool PlikZWydatkami::dopiszDoPliku(Wydatek wydatek){
 
     xml.FindElem();
     xml.IntoElem();
-    xml.AddElem("Expenses");
+    xml.AddElem("Expense");
     xml.IntoElem();
     xml.AddElem("expenseId", wydatek.pobierzIdWydatku());
     xml.AddElem("userId", wydatek.pobierzIdUzytkownika());
@@ -37,7 +37,7 @@ vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZ
     {
         xml.FindElem();
         xml.IntoElem();
-        while(xml.FindElem("Expenses")){
+        while(xml.FindElem("Expense")){
             xml.FindChildElem();
             idWydatku=atoi(xml.GetChildData().c_str());
             xml.FindChildElem();
