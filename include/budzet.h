@@ -23,6 +23,7 @@ public:
     void pokazBilansZBiezaciegoMiesiaca();
     void pokazBilansZPoprzedniegoMiesiaca();
     void pokazBilansZOkreslonegoOkresu();
+    void wylogowanieUzytkownika();
 
 protected:
 

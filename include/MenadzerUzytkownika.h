@@ -17,6 +17,7 @@ class MenadzerUzytkownika
         void logowanieUzytkownika();
         bool czyUzytkowikJestZalogowany();
         int pobierzIdNowegoUzytkownika();
+        void wylogowanieUzytkownika();
 
     protected:
 
