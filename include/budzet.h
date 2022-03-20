@@ -20,6 +20,7 @@ public:
     bool czyUzytkownikJestZalogowony();
     void dodajWydatek();
     void dodajDochod();
+    void pokazBilansZBiezaciegoMiesiaca();
 
 protected:
 

@@ -146,3 +146,13 @@ string MetodyPomocnicze::ustawDate(){
         }
     }
 }
+string MetodyPomocnicze::pobierzMiesiac(){
+    stringstream przechowaCzas;
+    time_t t = time(nullptr);
+    tm tm = *localtime(&t);
+    cout.imbue(locale());
+    przechowaCzas<<put_time(&tm, "%Y-%m-");
+    string aktualnyMieciac=przechowaCzas.str();
+    return aktualnyMieciac;
+
+}

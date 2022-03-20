@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include "PlikZWydatkami.h"
 #include "PlikZDochodami.h"
 #include "Wydatek.h"
@@ -17,6 +18,7 @@ class MenadzerBudzetu
         MenadzerBudzetu(string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami,int idZaloganegoUzytkownika);
         void dodajWydatek();
         void dodajDochod();
+        void pokazBilansZBiezacegoMiesiaca();
 
     protected:
 
@@ -30,6 +32,9 @@ class MenadzerBudzetu
         Dochod podajDaneNowegoDochodu();
         int pobierzIdNowegoWydatku();
         int pobierzIdNowegoDochodu();
+        void wyswietlDaneWydatku(Wydatek wydatek);
+        void wyswietlDaneDochodu(Dochod dochod);
+        bool sprawdzDate(string data);
 
 };
 

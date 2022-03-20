@@ -57,3 +57,6 @@ void Budzet::dodajWydatek(){
 void Budzet::dodajDochod(){
     menadzerBudzetu->dodajDochod();
 }
+void Budzet::pokazBilansZBiezaciegoMiesiaca(){
+    menadzerBudzetu->pokazBilansZBiezacegoMiesiaca();
+}

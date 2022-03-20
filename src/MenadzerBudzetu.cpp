@@ -85,3 +85,51 @@ int MenadzerBudzetu::pobierzIdNowegoDochodu() {
     else
         return dochody.back().pobierzIdDochodu() + 1;
 }
+void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
+    system("cls");
+    if (!wydatki.empty())
+    {
+        cout << "             >>> BILANS Z BIEZACEGO MIESIACA <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
+        {
+            if(sprawdzDate(itr->pobierzNazweWydatku())){
+                wyswietlDaneWydatku(*itr);
+            }
+        }
+        cout << endl;
+        for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
+            if(sprawdzDate(itr->pobierzNazweDochodu())){
+                wyswietlDaneDochodu(*itr);
+            }
+        }
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    system("pause");
+}
+void MenadzerBudzetu::wyswietlDaneWydatku(Wydatek wydatek)
+{
+    cout << endl << "Id wydatku:    " << wydatek.pobierzIdWydatku()<< endl;
+    cout << "Nazwa wydatku:         " << wydatek.pobierzNazweWydatku()<< endl;
+    cout << "Data wydatku:          " << wydatek.pobierzDateWydatku() << endl;
+    cout << "Kwota wydatku:         " << wydatek.pobierzKwoteWydatku() << endl;
+}
+void MenadzerBudzetu::wyswietlDaneDochodu(Dochod dochod)
+{
+    cout << endl << "Id dochodu:    " << dochod.pobierzIdDochodu()<< endl;
+    cout << "Nazwa dochodu:         " << dochod.pobierzNazweDochodu()<< endl;
+    cout << "Data dochodu:          " << dochod.pobierzDateDochodu() << endl;
+    cout << "Kwota dochodu:         " << dochod.pobierzKwoteDochodu() << endl;
+}
+bool MenadzerBudzetu::sprawdzDate(string data){
+    string aktualnyMiesiac=MetodyPomocnicze::pobierzMiesiac();
+    int pozycjaSzukaniegoFragemtu=data.find(aktualnyMiesiac);
+    if(pozycjaSzukaniegoFragemtu!=string::npos){
+        return true;
+    }else{
+        return false;
+    }
+}

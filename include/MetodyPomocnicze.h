@@ -19,6 +19,7 @@ class MetodyPomocnicze
         static float wczytajLiczbeZPrzecinkiem();
         static map<int,int> pobierzIloscDniWMiesiaciu(int rok);
         static string ustawDate();
+        static string pobierzMiesiac();
 
     protected:
 
