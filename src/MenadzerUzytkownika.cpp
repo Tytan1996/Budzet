@@ -49,6 +49,11 @@ int MenadzerUzytkownika::pobierzIdNowegoUzytkownika() {
     else
         return uzytkownicy.back().pobierzID() + 1;
 }
+int MenadzerUzytkownika::pobierzIdZalogowanegoUzytkownika(){
+
+    return idZalogowanegoUzytkownika;
+
+}
 bool MenadzerUzytkownika::czyIstniejeLogin(string login){
 
     for(int i=0;i<uzytkownicy.size();++i){

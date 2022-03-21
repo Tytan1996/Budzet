@@ -1,7 +1,7 @@
 #include "PlikZDochodami.h"
 
 PlikZDochodami::PlikZDochodami(string nazwaPlikuZDochodami):Pliki(nazwaPlikuZDochodami){
-
+    idOstatniegoDochodu=0;
 }
 bool PlikZDochodami::dopiszDoPliku(Dochod dochod){
     CMarkup xml;
@@ -22,7 +22,7 @@ bool PlikZDochodami::dopiszDoPliku(Dochod dochod){
     xml.AddElem("date", dochod.pobierzDateDochodu());
     xml.AddElem("item", dochod.pobierzNazweDochodu());
     xml.AddElem("amount", dochod.pobierzKwoteDochodu());
-
+    idOstatniegoDochodu++;
     xml.Save(pobierzNazwePliku());
 }
 vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZalogowanieUzytkownika){
@@ -52,9 +52,13 @@ vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZal
                 Dochod dochod(idDochodu,idUzytkownikaZPliku,dataDochodu,nazwaDochodu,kwotaDochodu);
                 dochody.push_back(dochod);
             }
+            idOstatniegoDochodu=idUzytkownikaZPliku;
         }
 
     }
     return dochody;
 
+}
+int PlikZDochodami::pobierzIdOstatniegoDochodu(){
+    return idOstatniegoDochodu;
 }

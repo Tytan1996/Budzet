@@ -15,10 +15,12 @@ class PlikZDochodami:public Pliki
         PlikZDochodami(string nazwaPlikuZDochodami);
         bool dopiszDoPliku(Dochod dochod);
         vector <Dochod> wczytajDochodyZalogowaniegoUzytkownika(int idZalogowanieUzytkownika);
+        int pobierzIdOstatniegoDochodu();
 
     protected:
 
     private:
+        int idOstatniegoDochodu;
         Dochod dochod;
         vector <Dochod> dochody;
 

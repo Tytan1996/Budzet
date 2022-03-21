@@ -45,7 +45,7 @@ void Budzet::rejestracjaUzytkownika(){
 void Budzet::logowanieUzytkownika(){
     menadzerUzytkownika.logowanieUzytkownika();
     if(menadzerUzytkownika.czyUzytkowikJestZalogowany()){
-        menadzerBudzetu=new MenadzerBudzetu(NAZWA_PLIKU_Z_WYDATKAMI,NAZWA_PLIKU_Z_DOCHODAMI,menadzerUzytkownika.pobierzIdNowegoUzytkownika());
+        menadzerBudzetu=new MenadzerBudzetu(NAZWA_PLIKU_Z_WYDATKAMI,NAZWA_PLIKU_Z_DOCHODAMI,menadzerUzytkownika.pobierzIdZalogowanegoUzytkownika());
     }
 }
 bool Budzet::czyUzytkownikJestZalogowony(){

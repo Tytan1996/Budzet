@@ -16,11 +16,12 @@ class PlikZWydatkami:public Pliki
         PlikZWydatkami(string nazwaPlikuZWydatkami);
         bool dopiszDoPliku(Wydatek wydatek);
         vector <Wydatek> wczytajWydatkowZalogowaniegoUzytkownika(int idZalogowanieUzytkownika);
-
+        int pobierzIdOstatniegoWydatku();
 
     protected:
 
     private:
+        int idOstatniegoWydatku;
         Wydatek wydatek;
         vector <Wydatek> wydatki;
 

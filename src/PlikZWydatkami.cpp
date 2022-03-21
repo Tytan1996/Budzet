@@ -1,6 +1,7 @@
 #include "PlikZWydatkami.h"
 
 PlikZWydatkami::PlikZWydatkami(string nazwaPlikuZWydatkami):Pliki(nazwaPlikuZWydatkami){
+    idOstatniegoWydatku=0;
 }
 
 bool PlikZWydatkami::dopiszDoPliku(Wydatek wydatek){
@@ -21,7 +22,7 @@ bool PlikZWydatkami::dopiszDoPliku(Wydatek wydatek){
     xml.AddElem("date", wydatek.pobierzDateWydatku());
     xml.AddElem("item", wydatek.pobierzNazweWydatku());
     xml.AddElem("amount", wydatek.pobierzKwoteWydatku());
-
+    idOstatniegoWydatku++;
     xml.Save(pobierzNazwePliku());
 }
 vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZalogowanieUzytkownika){
@@ -51,8 +52,12 @@ vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZ
                 Wydatek wydatek(idWydatku,idUzytkownikaZPliku,dataWydatku,nazwaWydatku,kwotaWydatku);
                 wydatki.push_back(wydatek);
             }
+            idOstatniegoWydatku=idWydatku;
         }
 
     }
     return wydatki;
+}
+int PlikZWydatkami::pobierzIdOstatniegoWydatku(){
+    return idOstatniegoWydatku;
 }

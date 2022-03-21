@@ -34,7 +34,8 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     Wydatek wydatek;
     string nazwaWydatku,dataWydatku;
     float kwota;
-    wydatek.ustawIdWydatku(pobierzIdNowegoWydatku());
+    wydatek.ustawIdWydatku(plikZWydatkami.pobierzIdOstatniegoWydatku());
+    cout<<ID_ZALOGOWANEGO_UZYTKOWNIKA<<endl;
     wydatek.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj nazwa wydatku: ";
@@ -55,7 +56,7 @@ Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
     Dochod dochod;
     string nazwaDochodu,dataDochodu;
     float kwota;
-    dochod.ustawIdDochodu(pobierzIdNowegoDochodu());
+    dochod.ustawIdDochodu(plikZDochodami.pobierzIdOstatniegoDochodu()+1);
     dochod.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj nazwa dochodu: ";
