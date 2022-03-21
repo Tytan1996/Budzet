@@ -35,7 +35,6 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     string nazwaWydatku,dataWydatku;
     float kwota;
     wydatek.ustawIdWydatku(plikZWydatkami.pobierzIdOstatniegoWydatku());
-    cout<<ID_ZALOGOWANEGO_UZYTKOWNIKA<<endl;
     wydatek.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj nazwa wydatku: ";
@@ -73,18 +72,6 @@ Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
 
     return dochod;
 
-}
-int MenadzerBudzetu::pobierzIdNowegoWydatku() {
-    if (wydatki.empty() == true)
-        return 1;
-    else
-        return wydatki.back().pobierzIdWydatku() + 1;
-}
-int MenadzerBudzetu::pobierzIdNowegoDochodu() {
-    if (dochody.empty() == true)
-        return 1;
-    else
-        return dochody.back().pobierzIdDochodu() + 1;
 }
 void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
     system("cls");

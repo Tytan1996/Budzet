@@ -5,7 +5,6 @@ PlikZDochodami::PlikZDochodami(string nazwaPlikuZDochodami):Pliki(nazwaPlikuZDoc
 }
 bool PlikZDochodami::dopiszDoPliku(Dochod dochod){
     CMarkup xml;
-    cout<<pobierzNazwePliku()<<endl;
     bool fileExists = xml.Load(pobierzNazwePliku());
     if (!fileExists)
     {

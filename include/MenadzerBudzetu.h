@@ -32,8 +32,6 @@ class MenadzerBudzetu
         vector <Dochod> dochody;
         Wydatek podajDaneNowegoWydatku();
         Dochod podajDaneNowegoDochodu();
-        int pobierzIdNowegoWydatku();
-        int pobierzIdNowegoDochodu();
         void wyswietlDaneWydatku(Wydatek wydatek);
         void wyswietlDaneDochodu(Dochod dochod);
         bool sprawdzDate(string data);
