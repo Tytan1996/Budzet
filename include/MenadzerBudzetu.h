@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <windows.h>
 #include "PlikZWydatkami.h"
 #include "PlikZDochodami.h"
 #include "Wydatek.h"
@@ -22,6 +23,7 @@ class MenadzerBudzetu
         void pokazBilansZBiezacegoMiesiaca();
         void pokazBilansZPoprzedniegoMiesiaca();
         void pokazBilansZOkreslonegoOkresu();
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
     protected:
 
@@ -39,6 +41,9 @@ class MenadzerBudzetu
         bool sprawdzDatePoprzednegoMiesiaca(string data);
         bool sprawdzOkres(string data,string od,string doKoncaBilansu);
         string pobierzDate();
+        float kwotaWydatku;
+        float kwotaDochodu;
+        float bilans;
 
 };
 
