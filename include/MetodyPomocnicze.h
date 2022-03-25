@@ -21,6 +21,7 @@ class MetodyPomocnicze
         static string ustawDate();
         static string pobierzMiesiac();
         static string pobierzDate();
+        static int zamienDateZStringNaInt(string data);
 
     protected:
 

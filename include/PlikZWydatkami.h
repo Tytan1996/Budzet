@@ -7,6 +7,7 @@
 #include "Pliki.h"
 #include "Wydatek.h"
 #include "Markup.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 

@@ -2,12 +2,13 @@
 
 
 Dochod::Dochod(){}
-Dochod::Dochod(int idDochodu,int idUzytkownika,string nazwaDochodu, string dataDochodu, float kwotaDochodu){
+Dochod::Dochod(int idDochodu,int idUzytkownika,string nazwaDochodu, string dataDochodu, float kwotaDochodu, int dataWFormacieInt){
     this->idDochodu=idDochodu;
     this->idUzytkownika=idUzytkownika;
     this->nazwaDochodu=nazwaDochodu;
     this->dataDochodu=dataDochodu;
     this->kwotaDochodu=kwotaDochodu;
+    dataDochoduWFormacieInt=dataWFormacieInt;
 }
 void Dochod::ustawIdDochodu(int nowyIdDochodu){
     idDochodu=nowyIdDochodu;
@@ -24,6 +25,9 @@ void Dochod::ustawDateDochodu(string nowaDataDochodu){
 void Dochod::ustawKwoteDochodu(float nowaKwotaDochodu){
     kwotaDochodu=nowaKwotaDochodu;
 }
+void Dochod::ustawDateDochoduWFormacieInt(int data){
+    dataDochoduWFormacieInt=data;
+}
 int Dochod::pobierzIdDochodu(){
     return idDochodu;
 }
@@ -38,4 +42,7 @@ string Dochod::pobierzDateDochodu(){
 }
 float Dochod::pobierzKwoteDochodu(){
     return kwotaDochodu;
+}
+int Dochod::pobierzDateDochoduWFormacieInt(){
+    return dataDochoduWFormacieInt;
 }

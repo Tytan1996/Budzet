@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 #include "PlikZWydatkami.h"
 #include "PlikZDochodami.h"
 #include "Wydatek.h"

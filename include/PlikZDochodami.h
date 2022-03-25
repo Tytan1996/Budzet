@@ -6,6 +6,7 @@
 #include "Markup.h"
 #include "Pliki.h"
 #include "Dochod.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 

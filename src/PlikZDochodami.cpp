@@ -28,7 +28,7 @@ vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZal
     CMarkup xml;
     vector <Dochod> dochody;
     bool fileExists = xml.Load( pobierzNazwePliku() );
-    int idDochodu, idUzytkownikaZPliku;
+    int idDochodu, idUzytkownikaZPliku,dataWFormacieInt;
     float kwotaDochodu;
     string dataDochodu, nazwaDochodu;
 
@@ -47,8 +47,9 @@ vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZal
             nazwaDochodu=xml.GetChildData();
             xml.FindChildElem();
             kwotaDochodu=atof(xml.GetChildData().c_str());
+            dataWFormacieInt=MetodyPomocnicze::zamienDateZStringNaInt(dataDochodu);
             if(idUzytkownikaZPliku==idZalogowanieUzytkownika){
-                Dochod dochod(idDochodu,idUzytkownikaZPliku,dataDochodu,nazwaDochodu,kwotaDochodu);
+                Dochod dochod(idDochodu,idUzytkownikaZPliku,dataDochodu,nazwaDochodu,kwotaDochodu,dataWFormacieInt);
                 dochody.push_back(dochod);
             }
             idOstatniegoDochodu=idUzytkownikaZPliku;

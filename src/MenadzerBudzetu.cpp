@@ -22,7 +22,6 @@ void MenadzerBudzetu::dodajDochod(){
     system("cls");
     cout << " >>> DODAWANIE NOWY DOCHOD <<<" << endl << endl;
     dochod = podajDaneNowegoDochodu();
-
     dochody.push_back(dochod);
     if(plikZDochodami.dopiszDoPliku(dochod))
         cout<<"Nowy dodatek zostal dodany" <<endl;
@@ -34,7 +33,7 @@ Wydatek MenadzerBudzetu::podajDaneNowegoWydatku(){
     Wydatek wydatek;
     string nazwaWydatku,dataWydatku;
     float kwota;
-    wydatek.ustawIdWydatku(plikZWydatkami.pobierzIdOstatniegoWydatku());
+    wydatek.ustawIdWydatku(plikZWydatkami.pobierzIdOstatniegoWydatku()+1);
     wydatek.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj nazwa wydatku: ";
@@ -55,6 +54,7 @@ Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
     Dochod dochod;
     string nazwaDochodu,dataDochodu;
     float kwota;
+    int dataWInt;
     dochod.ustawIdDochodu(plikZDochodami.pobierzIdOstatniegoDochodu()+1);
     dochod.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
@@ -65,17 +65,18 @@ Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
     dataDochodu = MetodyPomocnicze::ustawDate();
     cout<< "Podaj kwote dochodu: ";
     kwota = MetodyPomocnicze::wczytajLiczbeZPrzecinkiem();
-
+    dataWInt=MetodyPomocnicze::zamienDateZStringNaInt(dataDochodu);
     dochod.ustawNazweDochodu(nazwaDochodu);
     dochod.ustawDateDochodu(dataDochodu);
     dochod.ustawKwoteDochodu(kwota);
+    dochod.ustawDateDochoduWFormacieInt(dataWInt);
 
     return dochod;
 
 }
 void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
     system("cls");
-    if (!wydatki.empty())
+    if (!wydatki.empty() || !dochody.empty())
     {
         cout << ">>> BILANS Z BIEZACEGO MIESIACA <<<" << endl;
         cout << "-----------------------------------------------" << endl;
@@ -86,15 +87,18 @@ void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
             }
         }
         cout << endl;
+        cout << "Dochody" << endl;
+        cout << endl;
+        //sort(dochody.begin(), dochody.end());
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
             if(sprawdzDate(itr->pobierzNazweDochodu())){
-                wyswietlDaneDochodu(*itr);
+               wyswietlDaneDochodu(*itr);
             }
         }
     }
     else
     {
-        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+        cout << endl << "Nie ma zadnego rekordu" << endl << endl;
     }
     system("pause");
 }
@@ -119,7 +123,7 @@ void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
     }
     else
     {
-        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+        cout << endl <<"Nie ma zadnego rekordu" << endl << endl;
     }
     system("pause");
 
@@ -151,7 +155,7 @@ void MenadzerBudzetu::pokazBilansZOkreslonegoOkresu(){
     }
     else
     {
-        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+        cout << endl << "Nie ma zadnego rekordu" << endl << endl;
     }
     system("pause");
 

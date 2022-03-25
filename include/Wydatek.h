@@ -10,17 +10,23 @@ class Wydatek
 {
     public:
         Wydatek();
-        Wydatek(int idWydatku,int idUzytkownika,string nazwaWydatku, string dataWydatku, float kwotaWydatku);
+        Wydatek(int idWydatku,int idUzytkownika,string nazwaWydatku, string dataWydatku, float kwotaWydatku, int dataWFormacieInt);
         void ustawIdWydatku(int nowyIdWydatku);
         void ustawIdUzytkownika(int nowyIdUzytkownika);
         void ustawNazweWydatku(string nowaNazwaWydatku);
         void ustawDateWydatku(string nowaDataWydatku);
         void ustawKwotewydatku(float nowaKwotaWydatku);
+        void ustawDateWydatkuWFormieInt(int data);
         int pobierzIdWydatku();
         int pobierzIdUzytkownika();
         string pobierzNazweWydatku();
         string pobierzDateWydatku();
         float pobierzKwoteWydatku();
+        int pobierzDateWydatkuWFormiacieInt();
+        bool operator < (const Wydatek& str) const
+        {
+            return (dataWydatkuWFormacieInt < str.dataWydatkuWFormacieInt);
+        }
 
     protected:
 
@@ -30,6 +36,7 @@ class Wydatek
         string nazwaWydatku;
         string dataWydatku;
         float kwotaWydatku;
+        int dataWydatkuWFormacieInt;
 };
 
 

@@ -2,12 +2,13 @@
 
 Wydatek::Wydatek(){}
 
-Wydatek::Wydatek(int idWydatku,int idUzytkownika,string nazwaWydatku, string dataWydatku, float kwotaWydatku){
+Wydatek::Wydatek(int idWydatku,int idUzytkownika,string nazwaWydatku, string dataWydatku, float kwotaWydatku,int dataWFormacieInt){
     this->idWydatku=idWydatku;
     this->idUzytkownika=idUzytkownika;
     this->nazwaWydatku=nazwaWydatku;
     this->dataWydatku=dataWydatku;
     this->kwotaWydatku=kwotaWydatku;
+    dataWydatkuWFormacieInt=dataWFormacieInt;
 }
 
 void Wydatek::ustawIdWydatku(int nowyIdWydatku){
@@ -25,6 +26,9 @@ void Wydatek::ustawDateWydatku(string nowaDataWydatku){
 void Wydatek::ustawKwotewydatku(float nowaKwotaWydatku){
     kwotaWydatku=nowaKwotaWydatku;
 }
+void Wydatek::ustawDateWydatkuWFormieInt(int data){
+    dataWydatkuWFormacieInt=data;
+}
 int Wydatek::pobierzIdWydatku(){
     return idWydatku;
 }
@@ -39,4 +43,7 @@ string Wydatek::pobierzDateWydatku(){
 }
 float Wydatek::pobierzKwoteWydatku(){
     return kwotaWydatku;
+}
+int Wydatek::pobierzDateWydatkuWFormiacieInt(){
+    return dataWydatkuWFormacieInt;
 }

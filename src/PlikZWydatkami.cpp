@@ -29,7 +29,7 @@ vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZ
     CMarkup xml;
     vector <Wydatek> wydatki;
     bool fileExists = xml.Load( pobierzNazwePliku() );
-    int idWydatku, idUzytkownikaZPliku;
+    int idWydatku, idUzytkownikaZPliku, dataWFormacieInt;
     float kwotaWydatku;
     string dataWydatku, nazwaWydatku;
 
@@ -48,8 +48,9 @@ vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZ
             nazwaWydatku=xml.GetChildData();
             xml.FindChildElem();
             kwotaWydatku=atof(xml.GetChildData().c_str());
+            dataWFormacieInt=MetodyPomocnicze::zamienDateZStringNaInt(dataWydatku);
             if(idUzytkownikaZPliku==idZalogowanieUzytkownika){
-                Wydatek wydatek(idWydatku,idUzytkownikaZPliku,dataWydatku,nazwaWydatku,kwotaWydatku);
+                Wydatek wydatek(idWydatku,idUzytkownikaZPliku,dataWydatku,nazwaWydatku,kwotaWydatku, dataWFormacieInt);
                 wydatki.push_back(wydatek);
             }
             idOstatniegoWydatku=idWydatku;

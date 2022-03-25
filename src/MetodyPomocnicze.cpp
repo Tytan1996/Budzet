@@ -79,8 +79,12 @@ string MetodyPomocnicze::pobierzDate(){
         }
         cout<<"Zla data!"<<endl;
     }
-
-
+}
+int MetodyPomocnicze::zamienDateZStringNaInt(string data){
+    int dataWFormacieInt;
+    data.erase(7,1);
+    data.erase(4,1);
+    dataWFormacieInt=atoi(data.c_str());
 }
 string MetodyPomocnicze::dodajZeroDoDaty(string data){
     string zero="0";
