@@ -6,8 +6,7 @@ using namespace std;
 int main()
 {
     char wybor;
-    Budzet budzet("users.xml");
-
+    Budzet budzet("users.xml", "incomes.xml", "expenses.xml");
     while(true){
         if (budzet.czyUzytkownikJestZalogowony()==false)
             {
@@ -29,6 +28,34 @@ int main()
             }
         }else{
             wybor=budzet.wybierzOpcjeZMenuUzytkownika();
+            switch(wybor){
+            case '1':
+                budzet.dodajDochod();
+                break;
+            case '2':
+                budzet.dodajWydatek();
+                break;
+            case '3':
+                budzet.pokazBilansZBiezaciegoMiesiaca();
+                break;
+            case '4':
+                budzet.pokazBilansZPoprzedniegoMiesiaca();
+                break;
+            case '5':
+                budzet.pokazBilansZOkreslonegoOkresu();
+                break;
+            case '6':
+                budzet.zmianaHaslaZalogowanegoUzytkownika();
+                break;
+            case '7':
+                budzet.wylogowanieUzytkownika();
+                break;
+            default:
+                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                system("pause");
+                break;
+            }
+
         }
 
     }

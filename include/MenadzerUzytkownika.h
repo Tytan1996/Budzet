@@ -16,6 +16,10 @@ class MenadzerUzytkownika
         void rejestracjaUzytkownika();
         void logowanieUzytkownika();
         bool czyUzytkowikJestZalogowany();
+        int pobierzIdNowegoUzytkownika();
+        int pobierzIdZalogowanegoUzytkownika();
+        void zmianaHaslaZalogowanegoUzytkownika();
+        void wylogowanieUzytkownika();
 
     protected:
 
@@ -23,7 +27,6 @@ class MenadzerUzytkownika
         int idZalogowanegoUzytkownika;
         PlikZUzytkownikami plikZUzytkownikami;
         Uzytkownik podajDaneNowegoUzytkownika();
-        int pobierzIdNowegoUzytkownika();
         bool czyIstniejeLogin(string login);
         vector <Uzytkownik> uzytkownicy;
 

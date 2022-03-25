@@ -1,9 +1,7 @@
 #include "Budzet.h"
 
-Budzet::Budzet(string nazwaPlikuZUzytkownikami):menadzerUzytkownika(nazwaPlikuZUzytkownikami){
-
+Budzet::Budzet(string nazwaPlikuZUzytkownikami,string nazwaPlikuZDochodami, string nazwaPlikuZWydatkami):menadzerUzytkownika(nazwaPlikuZUzytkownikami),NAZWA_PLIKU_Z_DOCHODAMI(nazwaPlikuZDochodami),NAZWA_PLIKU_Z_WYDATKAMI(nazwaPlikuZWydatkami){
 }
-
 char Budzet::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
@@ -46,7 +44,33 @@ void Budzet::rejestracjaUzytkownika(){
 }
 void Budzet::logowanieUzytkownika(){
     menadzerUzytkownika.logowanieUzytkownika();
+    if(menadzerUzytkownika.czyUzytkowikJestZalogowany()){
+        menadzerBudzetu=new MenadzerBudzetu(NAZWA_PLIKU_Z_WYDATKAMI,NAZWA_PLIKU_Z_DOCHODAMI,menadzerUzytkownika.pobierzIdZalogowanegoUzytkownika());
+    }
 }
 bool Budzet::czyUzytkownikJestZalogowony(){
     return menadzerUzytkownika.czyUzytkowikJestZalogowany();
+}
+void Budzet::dodajWydatek(){
+    menadzerBudzetu->dodajWydatek();
+}
+void Budzet::dodajDochod(){
+    menadzerBudzetu->dodajDochod();
+}
+void Budzet::pokazBilansZBiezaciegoMiesiaca(){
+    menadzerBudzetu->pokazBilansZBiezacegoMiesiaca();
+}
+void Budzet::pokazBilansZPoprzedniegoMiesiaca(){
+    menadzerBudzetu->pokazBilansZPoprzedniegoMiesiaca();
+}
+void Budzet::pokazBilansZOkreslonegoOkresu(){
+    menadzerBudzetu->pokazBilansZOkreslonegoOkresu();
+}
+void Budzet::zmianaHaslaZalogowanegoUzytkownika(){
+    menadzerUzytkownika.zmianaHaslaZalogowanegoUzytkownika();
+}
+void Budzet::wylogowanieUzytkownika(){
+    menadzerUzytkownika.wylogowanieUzytkownika();
+    delete menadzerBudzetu;
+    menadzerBudzetu=NULL;
 }
