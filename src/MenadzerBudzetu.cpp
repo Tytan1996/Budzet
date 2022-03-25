@@ -80,18 +80,19 @@ void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
     {
         cout << ">>> BILANS Z BIEZACEGO MIESIACA <<<" << endl;
         cout << "-----------------------------------------------" << endl;
+        sort(wydatki.begin(), wydatki.end());
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
-            if(sprawdzDate(itr->pobierzNazweWydatku())){
+            if(sprawdzDate(itr->pobierzDateWydatku())){
                 wyswietlDaneWydatku(*itr);
             }
         }
         cout << endl;
         cout << "Dochody" << endl;
         cout << endl;
-        //sort(dochody.begin(), dochody.end());
+        sort(dochody.begin(), dochody.end());
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
-            if(sprawdzDate(itr->pobierzNazweDochodu())){
+            if(sprawdzDate(itr->pobierzDateDochodu())){
                wyswietlDaneDochodu(*itr);
             }
         }
@@ -110,13 +111,13 @@ void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
         cout << "-----------------------------------------------" << endl;
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
-            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweWydatku())){
+            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzDateWydatku())){
                 wyswietlDaneWydatku(*itr);
             }
         }
         cout << endl;
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
-            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweDochodu())){
+            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzDateDochodu())){
                 wyswietlDaneDochodu(*itr);
             }
         }
@@ -142,13 +143,13 @@ void MenadzerBudzetu::pokazBilansZOkreslonegoOkresu(){
         cout << "-----------------------------------------------" << endl;
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
-            if(sprawdzOkres(itr->pobierzNazweWydatku(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
+            if(sprawdzOkres(itr->pobierzDateWydatku(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 wyswietlDaneWydatku(*itr);
             }
         }
         cout << endl;
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
-            if(sprawdzOkres(itr->pobierzNazweDochodu(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
+            if(sprawdzOkres(itr->pobierzDateDochodu(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 wyswietlDaneDochodu(*itr);
             }
         }

@@ -49,10 +49,10 @@ vector <Dochod> PlikZDochodami::wczytajDochodyZalogowaniegoUzytkownika(int idZal
             kwotaDochodu=atof(xml.GetChildData().c_str());
             dataWFormacieInt=MetodyPomocnicze::zamienDateZStringNaInt(dataDochodu);
             if(idUzytkownikaZPliku==idZalogowanieUzytkownika){
-                Dochod dochod(idDochodu,idUzytkownikaZPliku,dataDochodu,nazwaDochodu,kwotaDochodu,dataWFormacieInt);
+                Dochod dochod(idDochodu,idUzytkownikaZPliku,nazwaDochodu,dataDochodu,kwotaDochodu,dataWFormacieInt);
                 dochody.push_back(dochod);
             }
-            idOstatniegoDochodu=idUzytkownikaZPliku;
+            idOstatniegoDochodu++;
         }
 
     }

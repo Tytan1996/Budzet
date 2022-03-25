@@ -50,10 +50,10 @@ vector <Wydatek> PlikZWydatkami::wczytajWydatkowZalogowaniegoUzytkownika(int idZ
             kwotaWydatku=atof(xml.GetChildData().c_str());
             dataWFormacieInt=MetodyPomocnicze::zamienDateZStringNaInt(dataWydatku);
             if(idUzytkownikaZPliku==idZalogowanieUzytkownika){
-                Wydatek wydatek(idWydatku,idUzytkownikaZPliku,dataWydatku,nazwaWydatku,kwotaWydatku, dataWFormacieInt);
+                Wydatek wydatek(idWydatku,idUzytkownikaZPliku,nazwaWydatku,dataWydatku,kwotaWydatku, dataWFormacieInt);
                 wydatki.push_back(wydatek);
             }
-            idOstatniegoWydatku=idWydatku;
+            idOstatniegoWydatku++;
         }
 
     }
