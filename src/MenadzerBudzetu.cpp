@@ -76,50 +76,82 @@ Dochod MenadzerBudzetu::podajDaneNowegoDochodu(){
 }
 void MenadzerBudzetu::pokazBilansZBiezacegoMiesiaca(){
     system("cls");
+    kwotaDochodu=0;
+    kwotaWydatku=0;
     if (!wydatki.empty() || !dochody.empty())
     {
         cout << ">>> BILANS Z BIEZACEGO MIESIACA <<<" << endl;
         cout << "-----------------------------------------------" << endl;
+        SetConsoleTextAttribute(hConsole, 12);
+        cout << ">>> WYDATKI <<<"<<endl;
+        sort(wydatki.begin(), wydatki.end());
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
-            if(sprawdzDate(itr->pobierzNazweWydatku())){
+            if(sprawdzDate(itr->pobierzDateWydatku())){
                 wyswietlDaneWydatku(*itr);
+                kwotaWydatku+=itr->pobierzKwoteWydatku();
             }
         }
+        cout <<"Laczna kwota wydatkow: "<<kwotaWydatku<<endl;
+        SetConsoleTextAttribute(hConsole, 2);
         cout << endl;
-        cout << "Dochody" << endl;
-        cout << endl;
-        //sort(dochody.begin(), dochody.end());
+        cout << ">>>DOCHODY<<<" << endl;
+        sort(dochody.begin(), dochody.end());
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
-            if(sprawdzDate(itr->pobierzNazweDochodu())){
+            if(sprawdzDate(itr->pobierzDateDochodu())){
                wyswietlDaneDochodu(*itr);
+               kwotaDochodu+=itr->pobierzKwoteDochodu();
             }
         }
+        bilans=kwotaDochodu-kwotaWydatku;
+        cout<<endl<<"Laczna kwota dochodu: "<<kwotaDochodu<<endl;
+        if(bilans<0){
+            SetConsoleTextAttribute(hConsole, 12);
+        }
+        cout<<endl<<"Bilans: "<<bilans<<endl<<endl;
     }
     else
     {
         cout << endl << "Nie ma zadnego rekordu" << endl << endl;
     }
+    SetConsoleTextAttribute(hConsole, 7);
     system("pause");
 }
 void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
     system("cls");
-    if (!wydatki.empty())
+    kwotaDochodu=0;
+    kwotaWydatku=0;
+    if (!wydatki.empty() || !dochody.empty())
     {
         cout << ">>> BILANS Z POPRZEDNIEGO MIESIACA <<<" << endl;
         cout << "-----------------------------------------------" << endl;
+        SetConsoleTextAttribute(hConsole, 12);
+        cout << ">>> WYDATKI <<<"<<endl;
+        sort(wydatki.begin(), wydatki.end());
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
-            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweWydatku())){
+            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzDateWydatku())){
                 wyswietlDaneWydatku(*itr);
+                kwotaWydatku+=itr->pobierzKwoteWydatku();
             }
         }
+        cout <<"Laczna kwota wydatkow: "<<kwotaWydatku<<endl;
         cout << endl;
+        SetConsoleTextAttribute(hConsole, 2);
+        cout << ">>>DOCHODY<<<" << endl;
+        sort(dochody.begin(), dochody.end());
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
-            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzNazweDochodu())){
+            if(sprawdzDatePoprzednegoMiesiaca(itr->pobierzDateDochodu())){
                 wyswietlDaneDochodu(*itr);
+                kwotaDochodu+=itr->pobierzKwoteDochodu();
             }
         }
+        bilans=kwotaDochodu-kwotaWydatku;
+        cout<<endl<<"Laczna kwota dochodu: "<<kwotaDochodu<<endl;
+        if(bilans<0){
+            SetConsoleTextAttribute(hConsole, 12);
+        }
+        cout<<endl<<"Bilans: "<<bilans<<endl<<endl;
     }
     else
     {
@@ -131,27 +163,44 @@ void MenadzerBudzetu::pokazBilansZPoprzedniegoMiesiaca(){
 }
 void MenadzerBudzetu::pokazBilansZOkreslonegoOkresu(){
     system("cls");
+    kwotaDochodu=0;
+    kwotaWydatku=0;
     string dataOdPoczatkuBilansu,dataDoKoncaBilasnu;
     cout<<"Podaj date od jakiego czasu chcesz bilans: ";
     dataOdPoczatkuBilansu=MetodyPomocnicze::pobierzDate();
     cout<<"Podaj date do jakiego czasu chcesz bilans: ";
     dataDoKoncaBilasnu=MetodyPomocnicze::pobierzDate();
-    if (!wydatki.empty())
+    if (!wydatki.empty() || !dochody.empty())
     {
-        cout << ">>> BILANS Z POPRZEDNIEGO MIESIACA <<<" << endl;
+        cout << ">>> BILANS Z WYBRANEGO OKRESU <<<" << endl;
         cout << "-----------------------------------------------" << endl;
+        SetConsoleTextAttribute(hConsole, 12);
+        cout << ">>> WYDATKI <<<"<<endl;
+        sort(wydatki.begin(), wydatki.end());
         for (vector <Wydatek> :: iterator itr = wydatki.begin(); itr != wydatki.end(); itr++)
         {
-            if(sprawdzOkres(itr->pobierzNazweWydatku(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
+            if(sprawdzOkres(itr->pobierzDateWydatku(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 wyswietlDaneWydatku(*itr);
+                kwotaWydatku+=itr->pobierzKwoteWydatku();
             }
         }
+        cout <<"Laczna kwota wydatkow: "<<kwotaWydatku<<endl;
         cout << endl;
+        SetConsoleTextAttribute(hConsole, 2);
+        cout << ">>>DOCHODY<<<" << endl;
+        sort(dochody.begin(), dochody.end());
         for (vector <Dochod>::iterator itr=dochody.begin();itr!=dochody.end();itr++){
-            if(sprawdzOkres(itr->pobierzNazweDochodu(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
+            if(sprawdzOkres(itr->pobierzDateDochodu(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 wyswietlDaneDochodu(*itr);
+                kwotaDochodu+=itr->pobierzKwoteDochodu();
             }
         }
+        bilans=kwotaDochodu-kwotaWydatku;
+        cout<<endl<<"Laczna kwota dochodu: "<<kwotaDochodu<<endl;
+        if(bilans<0){
+            SetConsoleTextAttribute(hConsole, 12);
+        }
+        cout<<endl<<"Bilans: "<<bilans<<endl<<endl;
     }
     else
     {
