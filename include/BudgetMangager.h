@@ -17,7 +17,7 @@ using namespace std;
 class BudgetMangager
 {
 public:
-        BudgetMangager(string nazwaPlikuZDochodami, string expenseFileName,int idZaloganegoUzytkownika);
+        BudgetMangager(string incomeFileName, string expenseFileName,int idZaloganegoUzytkownika);
         void addAnExpense(); //dodajWydatek
         void addIncome(); //dodajDochod
         void showTheBalanceSheetForTheCurrentMonth();//pokazBilansZBiezacegoMiesiaca

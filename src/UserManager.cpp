@@ -1,7 +1,7 @@
 #include "UserManager.h"
 
 
-UserManager::UserManager(string nazwaPlikuZUzytkownikami):fileWithUsers(nazwaPlikuZUzytkownikami){
+UserManager::UserManager(string nameOfTheFileWithTheUsers):fileWithUsers(nameOfTheFileWithTheUsers){
     loggedInUserId=0;
     users=fileWithUsers.loadUsersFromFile();
 }

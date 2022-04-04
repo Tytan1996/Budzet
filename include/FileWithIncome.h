@@ -13,7 +13,7 @@ using namespace std;
 class FileWithIncome:public Files
 {
     public:
-        FileWithIncome(string nazwaPlikuZDochodami);
+        FileWithIncome(string incomeFileName);
         bool addToTheFile(Income income);
         vector <Income> loadTheIncomeOfTheLoggedInUser(int loggedInUserId);
         int getIdOfLastIncome();

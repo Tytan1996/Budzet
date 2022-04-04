@@ -15,7 +15,7 @@ using namespace std;
 class FileWithUsers:public Files
 {
     public:
-        FileWithUsers(string nazwaPlikuZUzytkownikami);
+        FileWithUsers(string nameOfTheFileWithTheUsers);
         virtual void addToTheFile(User user);
         vector<User> loadUsersFromFile();
         void saveAllUsersToFile(vector <User> &users);

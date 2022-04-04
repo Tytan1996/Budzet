@@ -2,12 +2,12 @@
 
 Expense::Expense(){}
 
-Expense::Expense(int expenseId,int userId,string expenseName, string expenseDate, float kwotaWydatku,int dateInIntegerFormat){
+Expense::Expense(int expenseId,int userId,string expenseName, string expenseDate, float theAmountOfTheExpense,int dateInIntegerFormat){
     this->expenseId=expenseId;
     this->userId=userId;
     this->expenseName=expenseName;
     this->expenseDate=expenseDate;
-    this->kwotaWydatku=kwotaWydatku;
+    this->theAmountOfTheExpense=theAmountOfTheExpense;
     expenseDateInIntegerFormat=dateInIntegerFormat;
 }
 
@@ -24,7 +24,7 @@ void Expense::setTheExpenseDate(string newExpenseDate){
     expenseDate=newExpenseDate;
 }
 void Expense::setTheExpenseAmount(float newExpenseAmount){
-    kwotaWydatku=newExpenseAmount;
+    theAmountOfTheExpense=newExpenseAmount;
 }
 void Expense::setTheExpenseDateAsAnInteger(int date){
     expenseDateInIntegerFormat=date;
@@ -42,7 +42,7 @@ string Expense::getExpenseDate(){
     return expenseDate;
 }
 float Expense::getTheAmountOfTheExpense(){
-    return kwotaWydatku;
+    return theAmountOfTheExpense;
 }
 int Expense::getExpenseDateInIntegerFormat(){
     return expenseDateInIntegerFormat;

@@ -10,7 +10,7 @@ using namespace std;
 class Files
 {
     public:
-        Files(string nazwaPlikuZUzytkownikami);
+        Files(string nameOfTheFileWithTheUsers);
         bool checkIfTheFileExists();
         string getFilename();
 

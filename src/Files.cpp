@@ -1,6 +1,6 @@
 #include "Files.h"
 
-Files::Files(string nazwaPlikuZUzytkownikami):FILE_NAME(nazwaPlikuZUzytkownikami){
+Files::Files(string nameOfTheFileWithTheUsers):FILE_NAME(nameOfTheFileWithTheUsers){
 
 }
 
@@ -9,16 +9,16 @@ string Files::getFilename() {
 }
 
 bool Files::checkIfTheFileExists(){
-    bool pusty = true;
-    fstream plikTekstowy;
-    plikTekstowy.open(getFilename().c_str(), ios::app);
+    bool empty = true;
+    fstream textFile;
+    textFile.open(getFilename().c_str(), ios::app);
 
-    if (plikTekstowy.good() == true) {
-        plikTekstowy.seekg(0, ios::end);
-        if (plikTekstowy.tellg() != 0)
-            pusty = false;
+    if (textFile.good() == true) {
+        textFile.seekg(0, ios::end);
+        if (textFile.tellg() != 0)
+            empty = false;
     }
 
-    plikTekstowy.close();
-    return pusty;
+    textFile.close();
+    return empty;
 }

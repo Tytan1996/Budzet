@@ -39,7 +39,7 @@ Expense BudgetMangager::provideDetailsOfTheNewExpense(){
     cout << "Podaj nazwa wydatku: ";
     expenseName = AuxiliaryMethods::loadLines();
 
-    cout << "Podaj data wydatku: ";
+    cout << "Podaj date wydatku: ";
     expenseDate = AuxiliaryMethods::setTheDate();
     cout<< "Podaj kwote wydatku: ";
     kwota = AuxiliaryMethods::loadFloat();
@@ -61,7 +61,7 @@ Income BudgetMangager::provideDetailsOfTheNewIncome(){
     cout << "Podaj nazwa dochodu: ";
     nameTheIncome = AuxiliaryMethods::loadLines();
 
-    cout << "Podaj data dochodu: ";
+    cout << "Podaj date dochodu: ";
     dateOfIncome = AuxiliaryMethods::setTheDate();
     cout<< "Podaj kwote dochodu: ";
     amount = AuxiliaryMethods::loadFloat();

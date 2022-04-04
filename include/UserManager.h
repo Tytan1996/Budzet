@@ -11,7 +11,7 @@ using namespace std;
 class UserManager
 {
     public:
-        UserManager(string nazwaPlikuZUzytkownikami);
+        UserManager(string nameOfTheFileWithTheUsers);
         void userRegistration();
         void userLogin();
         bool whetherTheUserIsLoggedIn();

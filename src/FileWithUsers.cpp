@@ -1,6 +1,6 @@
 #include "FileWithUsers.h"
 
-FileWithUsers::FileWithUsers(string nazwaPlikuZUzytkownikami):Files(nazwaPlikuZUzytkownikami){
+FileWithUsers::FileWithUsers(string nameOfTheFileWithTheUsers):Files(nameOfTheFileWithTheUsers){
 
 }
 

@@ -1,6 +1,6 @@
 #include "FileWithIncome.h"
 
-FileWithIncome::FileWithIncome(string nazwaPlikuZDochodami):Files(nazwaPlikuZDochodami){
+FileWithIncome::FileWithIncome(string incomeFileName):Files(incomeFileName){
     lastIncomeId=0;
 }
 bool FileWithIncome::addToTheFile(Income income){

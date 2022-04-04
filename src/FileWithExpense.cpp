@@ -30,7 +30,7 @@ vector <Expense> FileWithExpense::loadExpenditureOfALoggedInUser(int loggedInUse
     vector <Expense> expenses;
     bool fileExists = xml.Load( getFilename() );
     int expenseId, userIdFromFile, dateInIntegerFormat;
-    float kwotaWydatku;
+    float theAmountOfTheExpense;
     string expenseDate, expenseName;
 
     if (fileExists)
@@ -47,10 +47,10 @@ vector <Expense> FileWithExpense::loadExpenditureOfALoggedInUser(int loggedInUse
             xml.FindChildElem();
             expenseName=xml.GetChildData();
             xml.FindChildElem();
-            kwotaWydatku=atof(xml.GetChildData().c_str());
+            theAmountOfTheExpense=atof(xml.GetChildData().c_str());
             dateInIntegerFormat=AuxiliaryMethods::replaceDateWithStringFromInt(expenseDate);
             if(userIdFromFile==loggedInUserId){
-                Expense expense(expenseId,userIdFromFile,expenseName,expenseDate,kwotaWydatku, dateInIntegerFormat);
+                Expense expense(expenseId,userIdFromFile,expenseName,expenseDate,theAmountOfTheExpense, dateInIntegerFormat);
                 expenses.push_back(expense);
             }
             lastExpenseId++;

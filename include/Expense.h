@@ -9,7 +9,7 @@ class Expense
 {
     public:
         Expense();
-        Expense(int expenseId,int userId,string expenseName, string expenseDate, float kwotaWydatku, int dateInIntegerFormat);
+        Expense(int expenseId,int userId,string expenseName, string expenseDate, float theAmountOfTheExpense, int dateInIntegerFormat);
         void setTheExpenseId(int newExpenseId);
         void setTheUserId(int newUserId);
         void setTheExpenseName(string newNameOfTheExpense);
@@ -34,7 +34,7 @@ class Expense
         int userId;
         string expenseName;
         string expenseDate;
-        float kwotaWydatku;
+        float theAmountOfTheExpense;
         int expenseDateInIntegerFormat;
 };
 
