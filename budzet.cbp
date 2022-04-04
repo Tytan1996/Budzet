@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Budzet" />
+		<Option title="angielski" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Budzet" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/angielski" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Budzet" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/angielski" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,30 +34,33 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Dochod.h" />
-		<Unit filename="include/MenadzerBudzetu.h" />
-		<Unit filename="include/MenadzerUzytkownika.h" />
-		<Unit filename="include/MetodyPomocnicze.h" />
-		<Unit filename="include/PlikZDochodami.h" />
-		<Unit filename="include/PlikZUzytkownikami.h" />
-		<Unit filename="include/PlikZWydatkami.h" />
-		<Unit filename="include/Pliki.h" />
-		<Unit filename="include/Uzytkownik.h" />
-		<Unit filename="include/Wydatek.h" />
-		<Unit filename="include/budzet.h" />
+		<Unit filename="include/AuxiliaryMethods.h" />
+		<Unit filename="include/Budget.h" />
+		<Unit filename="include/BudgetMangager.h" />
+		<Unit filename="include/Expense.h" />
+		<Unit filename="include/FileWithExpense.h" />
+		<Unit filename="include/FileWithIncome.h" />
+		<Unit filename="include/FileWithUsers.h" />
+		<Unit filename="include/Files.h" />
+		<Unit filename="include/Income.h" />
+		<Unit filename="include/Markup.h" />
+		<Unit filename="include/User.h" />
+		<Unit filename="include/UserManager.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Dochod.cpp" />
+		<Unit filename="src/AuxiliaryMethods.cpp" />
+		<Unit filename="src/Budget.cpp" />
+		<Unit filename="src/BudgetMangager.cpp" />
+		<Unit filename="src/Expense.cpp" />
+		<Unit filename="src/FileWithExpense.cpp" />
+		<Unit filename="src/FileWithIncome.cpp" />
+		<Unit filename="src/FileWithUsers.cpp" />
+		<Unit filename="src/Files.cpp" />
+		<Unit filename="src/Income.cpp" />
 		<Unit filename="src/Markup.cpp" />
-		<Unit filename="src/MenadzerBudzetu.cpp" />
-		<Unit filename="src/MenadzerUzytkownika.cpp" />
-		<Unit filename="src/MetodyPomocnicze.cpp" />
-		<Unit filename="src/PlikZDochodami.cpp" />
-		<Unit filename="src/PlikZUzytkownikami.cpp" />
-		<Unit filename="src/PlikZWydatkami.cpp" />
-		<Unit filename="src/Pliki.cpp" />
-		<Unit filename="src/Uzytkownik.cpp" />
-		<Unit filename="src/Wydatek.cpp" />
-		<Unit filename="src/budzet.cpp" />
-		<Extensions />
+		<Unit filename="src/User.cpp" />
+		<Unit filename="src/UserManager.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

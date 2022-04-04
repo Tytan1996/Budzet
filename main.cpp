@@ -1,22 +1,22 @@
 #include <iostream>
-#include "Budzet.h"
+#include "Budget.h"
 
 using namespace std;
 
 int main()
 {
-    char wybor;
-    Budzet budzet("users.xml", "incomes.xml", "expenses.xml");
+    char selection;
+    Budget budget("users.xml", "incomes.xml", "expenses.xml");
     while(true){
-        if (budzet.czyUzytkownikJestZalogowony()==false)
+        if (budget.whetherTheUserIsLoggedIn()==false)
             {
-            wybor=budzet.wybierzOpcjeZMenuGlownego();
-            switch(wybor){
+            selection=budget.selectOptionsFromTheMainMenu();
+            switch(selection){
             case '1':
-                budzet.rejestracjaUzytkownika();
+                budget.userRegistration();
                 break;
             case '2':
-                budzet.logowanieUzytkownika();
+                budget.userLogin();
                 break;
             case '9':
                 exit(0);
@@ -27,28 +27,28 @@ int main()
                 break;
             }
         }else{
-            wybor=budzet.wybierzOpcjeZMenuUzytkownika();
-            switch(wybor){
+            selection=budget.selectOptionsFromTheMainUser();
+            switch(selection){
             case '1':
-                budzet.dodajDochod();
+                budget.addAnIncome();
                 break;
             case '2':
-                budzet.dodajWydatek();
+                budget.addAnExpense();
                 break;
             case '3':
-                budzet.pokazBilansZBiezaciegoMiesiaca();
+                budget.showTheBalanceSheetForTheCurrentMonth();
                 break;
             case '4':
-                budzet.pokazBilansZPoprzedniegoMiesiaca();
+                budget.showTheBalanceSheetForThePrevioustMonth();
                 break;
             case '5':
-                budzet.pokazBilansZOkreslonegoOkresu();
+                budget.showTheNalanceSheetOfASpecificPeriod();
                 break;
             case '6':
-                budzet.zmianaHaslaZalogowanegoUzytkownika();
+                budget.changeThePasswordOfTheLoggedInUser();
                 break;
             case '7':
-                budzet.wylogowanieUzytkownika();
+                budget.userLogout();
                 break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;

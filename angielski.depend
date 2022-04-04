@@ -1,0 +1,124 @@
+# depslib dependency file v1.0
+1648921938 source:d:\projekty\budzet\main.cpp
+	<iostream>
+	"Budget.h"
+
+1648875073 d:\projekty\budzet\include\budget.h
+	<iostream>
+	"UserManager.h"
+	"AuxiliaryMethods.h"
+	"BudgetMangager.h"
+
+1649076701 d:\projekty\budzet\include\usermanager.h
+	"User.h"
+	"FileWithUsers.h"
+	"AuxiliaryMethods.h"
+	<vector>
+
+1648921446 d:\projekty\budzet\include\user.h
+	<iostream>
+
+1648921447 d:\projekty\budzet\include\filewithusers.h
+	<iostream>
+	<fstream>
+	<vector>
+	<stdio.h>
+	"Markup.h"
+	"Files.h"
+	"User.h"
+
+1647105291 d:\projekty\budzet\include\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1648899278 d:\projekty\budzet\include\files.h
+	<iostream>
+	<fstream>
+	"User.h"
+
+1649078605 d:\projekty\budzet\include\auxiliarymethods.h
+	<iostream>
+	<sstream>
+	<ctime>
+	<iomanip>
+	<map>
+	<cstdlib>
+	<string>
+
+1649078371 d:\projekty\budzet\include\budgetmangager.h
+	<iostream>
+	<vector>
+	<string>
+	<algorithm>
+	<windows.h>
+	"FileWithExpense.h"
+	"FileWithIncome.h"
+	"Expense.h"
+	"Income.h"
+	"AuxiliaryMethods.h"
+
+1648899278 d:\projekty\budzet\include\filewithexpense.h
+	<iostream>
+	<vector>
+	"Files.h"
+	"Expense.h"
+	"Markup.h"
+	"AuxiliaryMethods.h"
+
+1649077543 d:\projekty\budzet\include\expense.h
+	<iostream>
+
+1648921447 d:\projekty\budzet\include\filewithincome.h
+	<iostream>
+	<vector>
+	"Markup.h"
+	"Files.h"
+	"Income.h"
+	"AuxiliaryMethods.h"
+
+1648840358 d:\projekty\budzet\include\income.h
+	<iostream>
+
+1649077704 source:d:\projekty\budzet\src\auxiliarymethods.cpp
+	"AuxiliaryMethods.h"
+
+1649076701 source:d:\projekty\budzet\src\budget.cpp
+	"Budget.h"
+
+1649078689 source:d:\projekty\budzet\src\budgetmangager.cpp
+	"BudgetMangager.h"
+
+1649078100 source:d:\projekty\budzet\src\expense.cpp
+	"Expense.h"
+
+1648899276 source:d:\projekty\budzet\src\files.cpp
+	"Files.h"
+
+1649077543 source:d:\projekty\budzet\src\filewithexpense.cpp
+	"FileWithExpense.h"
+
+1649077543 source:d:\projekty\budzet\src\filewithincome.cpp
+	"FileWithIncome.h"
+
+1648921447 source:d:\projekty\budzet\src\filewithusers.cpp
+	"FileWithUsers.h"
+
+1648840378 source:d:\projekty\budzet\src\income.cpp
+	"Income.h"
+
+1647105291 source:d:\projekty\budzet\src\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1648921463 source:d:\projekty\budzet\src\user.cpp
+	"User.h"
+
+1649076701 source:d:\projekty\budzet\src\usermanager.cpp
+	"UserManager.h"
+
