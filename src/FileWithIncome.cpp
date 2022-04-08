@@ -1,4 +1,7 @@
 #include "FileWithIncome.h"
+#include "Markup.h"
+#include "AuxiliaryMethods.h"
+#include "AuxiliaryMethodsDate.h"
 
 FileWithIncome::FileWithIncome(string incomeFileName):Files(incomeFileName){
     lastIncomeId=0;
@@ -20,7 +23,7 @@ bool FileWithIncome::addToTheFile(Income income){
     xml.AddElem("userId", income.getUserId());
     xml.AddElem("date", income.getIncomeDate());
     xml.AddElem("item", income.getIncomeName());
-    xml.AddElem("amount", income.getTheAmountOfIncome());
+    xml.AddElem("amount", AuxiliaryMethods::floatToString(income.getTheAmountOfIncome()));
     lastIncomeId++;
     xml.Save(getFilename());
 }
@@ -47,7 +50,7 @@ vector <Income> FileWithIncome::loadTheIncomeOfTheLoggedInUser(int loggedInUserI
             nameOfTheIncome=xml.GetChildData();
             xml.FindChildElem();
             amountOfIncome=atof(xml.GetChildData().c_str());
-            dateInIntegerFormat=AuxiliaryMethods::replaceDateWithStringFromInt(dateOfIncome);
+            dateInIntegerFormat=AuxiliaryMethodsDate::replaceDateWithStringFromInt(dateOfIncome);
             if(userIdFromFile==loggedInUserId){
                 Income income(idIncome,userIdFromFile,nameOfTheIncome,dateOfIncome,amountOfIncome,dateInIntegerFormat);
                 incomes.push_back(income);

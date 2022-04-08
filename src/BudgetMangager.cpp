@@ -1,4 +1,11 @@
 #include "BudgetMangager.h"
+#include <string>
+#include <algorithm>
+#include <string>
+#include "Expense.h"
+#include "Income.h"
+#include "AuxiliaryMethods.h"
+#include "AuxiliaryMethodsDate.h"
 
 BudgetMangager::BudgetMangager(string expenseFileName,string incomeFileName,int loggedInUserId):fileWithExpense(expenseFileName),fileWithIncome(incomeFileName), NEW_USER_ID(loggedInUserId){
     expenses=fileWithExpense.loadExpenditureOfALoggedInUser(loggedInUserId);
@@ -15,9 +22,10 @@ void BudgetMangager::addAnExpense(){
         cout<<"Nowy wydatek zostal dodany" <<endl;
     else
         cout<<"Blad. Nie udalo sie dodac nowego wydatek do pliku. "<<endl;
+
     system("pause");
 }
-void BudgetMangager::addIncome(){
+void BudgetMangager::addAnIncome(){
     Income income;
     system("cls");
     cout << " >>> DODAWANIE NOWY DOCHOD <<<" << endl << endl;
@@ -32,7 +40,8 @@ void BudgetMangager::addIncome(){
 Expense BudgetMangager::provideDetailsOfTheNewExpense(){
     Expense expense;
     string expenseName,expenseDate;
-    float kwota;
+    float amount;
+    int dateInIntFormat;
     expense.setTheExpenseId(fileWithExpense.getLastExpenseId()+1);
     expense.setTheUserId(NEW_USER_ID);
 
@@ -40,13 +49,14 @@ Expense BudgetMangager::provideDetailsOfTheNewExpense(){
     expenseName = AuxiliaryMethods::loadLines();
 
     cout << "Podaj date wydatku: ";
-    expenseDate = AuxiliaryMethods::setTheDate();
+    expenseDate = AuxiliaryMethodsDate::setTheDate();
     cout<< "Podaj kwote wydatku: ";
-    kwota = AuxiliaryMethods::loadFloat();
-
+    amount = AuxiliaryMethods::loadFloat();
+    dateInIntFormat=AuxiliaryMethodsDate::replaceDateWithStringFromInt(expenseDate);
+    expense.setTheExpenseDateAsAnInteger(dateInIntFormat);
     expense.setTheExpenseName(expenseName);
     expense.setTheExpenseDate(expenseDate);
-    expense.setTheExpenseAmount(kwota);
+    expense.setTheExpenseAmount(amount);
 
     return expense;
 }
@@ -62,10 +72,10 @@ Income BudgetMangager::provideDetailsOfTheNewIncome(){
     nameTheIncome = AuxiliaryMethods::loadLines();
 
     cout << "Podaj date dochodu: ";
-    dateOfIncome = AuxiliaryMethods::setTheDate();
+    dateOfIncome = AuxiliaryMethodsDate::setTheDate();
     cout<< "Podaj kwote dochodu: ";
     amount = AuxiliaryMethods::loadFloat();
-    dateInIntFormat=AuxiliaryMethods::replaceDateWithStringFromInt(dateOfIncome);
+    dateInIntFormat=AuxiliaryMethodsDate::replaceDateWithStringFromInt(dateOfIncome);
     income.setTheNameOfTheIncome(nameTheIncome);
     income.setTheDateOfIncome(dateOfIncome);
     income.setTheAmountOfIncome(amount);
@@ -85,19 +95,23 @@ void BudgetMangager::showTheBalanceSheetForTheCurrentMonth(){
         SetConsoleTextAttribute(hConsole, 12);
         cout << ">>> WYDATKI <<<"<<endl;
         sort(expenses.begin(), expenses.end());
+        sort(expenses.begin(), expenses.end());
         for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++)
         {
+            cout<<endl;
             if(checkDate(itr->getExpenseDate())){
                 displayExpenseData(*itr);
                 amountOfExpense+=itr->getTheAmountOfTheExpense();
             }
         }
+        cout<<endl;
         cout <<"Laczna kwota wydatkow: "<<amountOfExpense<<endl;
         SetConsoleTextAttribute(hConsole, 2);
         cout << endl;
         cout << ">>>DOCHODY<<<" << endl;
         sort(incomes.begin(), incomes.end());
         for (vector <Income>::iterator itr=incomes.begin();itr!=incomes.end();itr++){
+            cout<<endl;
             if(checkDate(itr->getIncomeDate())){
                displayIncomeData(*itr);
                amountOfIncome+=itr->getTheAmountOfIncome();
@@ -117,7 +131,7 @@ void BudgetMangager::showTheBalanceSheetForTheCurrentMonth(){
     SetConsoleTextAttribute(hConsole, 7);
     system("pause");
 }
-void BudgetMangager::showTheBalanceSheetForThePreviousMonth(){
+void BudgetMangager::showTheBalanceSheetForThePrevioustMonth(){
     system("cls");
     amountOfIncome=0;
     amountOfExpense=0;
@@ -130,17 +144,20 @@ void BudgetMangager::showTheBalanceSheetForThePreviousMonth(){
         sort(expenses.begin(), expenses.end());
         for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++)
         {
+            cout<<endl;
             if(checkTheDateOfThePreviousMonth(itr->getExpenseDate())){
                 displayExpenseData(*itr);
                 amountOfExpense+=itr->getTheAmountOfTheExpense();
             }
         }
+        cout<<endl;
         cout <<"Laczna kwota wydatkow: "<<amountOfExpense<<endl;
         cout << endl;
         SetConsoleTextAttribute(hConsole, 2);
         cout << ">>>DOCHODY<<<" << endl;
         sort(incomes.begin(), incomes.end());
         for (vector <Income>::iterator itr=incomes.begin();itr!=incomes.end();itr++){
+            cout<<endl;
             if(checkTheDateOfThePreviousMonth(itr->getIncomeDate())){
                 displayIncomeData(*itr);
                 amountOfIncome+=itr->getTheAmountOfIncome();
@@ -162,15 +179,16 @@ void BudgetMangager::showTheBalanceSheetForThePreviousMonth(){
 
 
 }
-void BudgetMangager::showTheBalanceSheetForASpecificPeriod(){
+void BudgetMangager::showTheNalanceSheetOfASpecificPeriod(){
     system("cls");
     amountOfIncome=0;
     amountOfExpense=0;
     string dataOdPoczatkuBilansu,dataDoKoncaBilasnu;
     cout<<"Podaj date od jakiego czasu chcesz bilans: ";
-    dataOdPoczatkuBilansu=AuxiliaryMethods::downloadDate();
+    dataOdPoczatkuBilansu=AuxiliaryMethodsDate::downloadDate();
     cout<<"Podaj date do jakiego czasu chcesz bilans: ";
-    dataDoKoncaBilasnu=AuxiliaryMethods::downloadDate();
+    dataDoKoncaBilasnu=AuxiliaryMethodsDate::downloadDate();
+    system("cls");
     if (!expenses.empty() || !incomes.empty())
     {
         cout << ">>> BILANS Z WYBRANEGO OKRESU <<<" << endl;
@@ -180,17 +198,20 @@ void BudgetMangager::showTheBalanceSheetForASpecificPeriod(){
         sort(expenses.begin(), expenses.end());
         for (vector <Expense> :: iterator itr = expenses.begin(); itr != expenses.end(); itr++)
         {
+            cout<<endl;
             if(checkPeriod(itr->getExpenseDate(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 displayExpenseData(*itr);
                 amountOfExpense+=itr->getTheAmountOfTheExpense();
             }
         }
+        cout<<endl;
         cout <<"Laczna kwota wydatkow: "<<amountOfExpense<<endl;
         cout << endl;
         SetConsoleTextAttribute(hConsole, 2);
         cout << ">>>DOCHODY<<<" << endl;
         sort(incomes.begin(), incomes.end());
         for (vector <Income>::iterator itr=incomes.begin();itr!=incomes.end();itr++){
+            cout<<endl;
             if(checkPeriod(itr->getIncomeDate(),dataOdPoczatkuBilansu,dataDoKoncaBilasnu)){
                 displayIncomeData(*itr);
                 amountOfIncome+=itr->getTheAmountOfIncome();
@@ -225,7 +246,7 @@ void BudgetMangager::displayIncomeData(Income income)
     cout << "Kwota dochodu:         " << income.getTheAmountOfIncome() << endl;
 }
 bool BudgetMangager::checkDate(string date){
-    string currentMonth=AuxiliaryMethods::downloadMonth();
+    string currentMonth=AuxiliaryMethodsDate::downloadMonth();
     int itemSearchFragment=date.find(currentMonth);
     if(itemSearchFragment!=string::npos){
         return true;
@@ -234,7 +255,7 @@ bool BudgetMangager::checkDate(string date){
     }
 }
 bool BudgetMangager::checkTheDateOfThePreviousMonth(string date){
-    string currentMonth=AuxiliaryMethods::downloadMonth();
+    string currentMonth=AuxiliaryMethodsDate::downloadMonth();
     int previousMonth=atoi(currentMonth.substr(5,2).c_str())+1;
     string month="";
     if(previousMonth<10){

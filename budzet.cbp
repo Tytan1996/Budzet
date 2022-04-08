@@ -35,6 +35,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/AuxiliaryMethods.h" />
+		<Unit filename="include/AuxiliaryMethodsDate.h" />
 		<Unit filename="include/Budget.h" />
 		<Unit filename="include/BudgetMangager.h" />
 		<Unit filename="include/Expense.h" />
@@ -48,6 +49,7 @@
 		<Unit filename="include/UserManager.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AuxiliaryMethods.cpp" />
+		<Unit filename="src/AuxiliaryMethodsDate.cpp" />
 		<Unit filename="src/Budget.cpp" />
 		<Unit filename="src/BudgetMangager.cpp" />
 		<Unit filename="src/Expense.cpp" />

@@ -3,7 +3,6 @@
 
 #include "User.h"
 #include "FileWithUsers.h"
-#include "AuxiliaryMethods.h"
 #include <vector>
 
 using namespace std;
@@ -17,7 +16,7 @@ class UserManager
         bool whetherTheUserIsLoggedIn();
         int getNewUserId();
         int getLoggedInUserId();
-        void changingThePasswordOfTheLoggedIInUser();
+        void changeThePasswordOfTheLoggedInUser();
         void userLogout();
 
     protected:

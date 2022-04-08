@@ -1,5 +1,5 @@
 #include "UserManager.h"
-
+#include "AuxiliaryMethods.h"
 
 UserManager::UserManager(string nameOfTheFileWithTheUsers):fileWithUsers(nameOfTheFileWithTheUsers){
     loggedInUserId=0;
@@ -55,8 +55,8 @@ int UserManager::getLoggedInUserId(){
 
 }
 bool UserManager::isThereALogin(string login){
-
-    for(int i=0;i<users.size();++i){
+    int numberofUsers=users.size();
+    for(int i=0;i<numberofUsers;++i){
         if(users[i].downloadLogin()==login){
             cout<<endl<< "Istnieje uzytkownik o takim loginie." <<endl;
             return true;
@@ -105,7 +105,7 @@ bool UserManager::whetherTheUserIsLoggedIn(){
     else
         return false;
 }
-void UserManager::changingThePasswordOfTheLoggedIInUser(){
+void UserManager::changeThePasswordOfTheLoggedInUser(){
     string newPassword = "";
     cout << "Podaj nowe haslo: ";
     newPassword = AuxiliaryMethods::loadLines();

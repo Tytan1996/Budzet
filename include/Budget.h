@@ -2,8 +2,8 @@
 #define BUDGET_H
 
 #include <iostream>
+
 #include "UserManager.h"
-#include "AuxiliaryMethods.h"
 #include "BudgetMangager.h"
 
 using namespace std;

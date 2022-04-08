@@ -1,4 +1,7 @@
 #include "FileWithExpense.h"
+#include "Markup.h"
+#include "AuxiliaryMethods.h"
+#include "AuxiliaryMethodsDate.h"
 
 FileWithExpense::FileWithExpense(string expenseFileName):Files(expenseFileName){
     lastExpenseId=0;
@@ -21,7 +24,7 @@ bool FileWithExpense::addToTheFile(Expense expense){
     xml.AddElem("userId", expense.getUserId());
     xml.AddElem("date", expense.getExpenseDate());
     xml.AddElem("item", expense.getExpenseName());
-    xml.AddElem("amount", expense.getTheAmountOfTheExpense());
+    xml.AddElem("amount", AuxiliaryMethods::floatToString(expense.getTheAmountOfTheExpense()));
     lastExpenseId++;
     xml.Save(getFilename());
 }
@@ -48,7 +51,7 @@ vector <Expense> FileWithExpense::loadExpenditureOfALoggedInUser(int loggedInUse
             expenseName=xml.GetChildData();
             xml.FindChildElem();
             theAmountOfTheExpense=atof(xml.GetChildData().c_str());
-            dateInIntegerFormat=AuxiliaryMethods::replaceDateWithStringFromInt(expenseDate);
+            dateInIntegerFormat=AuxiliaryMethodsDate::replaceDateWithStringFromInt(expenseDate);
             if(userIdFromFile==loggedInUserId){
                 Expense expense(expenseId,userIdFromFile,expenseName,expenseDate,theAmountOfTheExpense, dateInIntegerFormat);
                 expenses.push_back(expense);

@@ -2,8 +2,7 @@
 #define FILES_H
 
 #include <iostream>
-#include <fstream>
-#include "User.h"
+
 
 using namespace std;
 

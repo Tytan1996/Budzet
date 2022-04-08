@@ -1,4 +1,6 @@
 #include "Budget.h"
+#include "AuxiliaryMethods.h"
+
 
 Budget::Budget(string nameOfTheFileWithTheUsers,string nameOfTheIncomeFile, string nameOfTheExpenseFile):userManager(nameOfTheFileWithTheUsers),INCOME_FILE_NAME(nameOfTheIncomeFile),FILENAME_WITH_EXPENSES(nameOfTheExpenseFile){
 }
@@ -55,19 +57,19 @@ void Budget::addAnExpense(){
     budgetMangager->addAnExpense();
 }
 void Budget::addAnIncome(){
-    budgetMangager->addIncome();
+    budgetMangager->addAnIncome();
 }
 void Budget::showTheBalanceSheetForTheCurrentMonth(){
     budgetMangager->showTheBalanceSheetForTheCurrentMonth();
 }
 void Budget::showTheBalanceSheetForThePrevioustMonth(){
-    budgetMangager->showTheBalanceSheetForThePreviousMonth();
+    budgetMangager->showTheBalanceSheetForThePrevioustMonth();
 }
 void Budget::showTheNalanceSheetOfASpecificPeriod(){
-    budgetMangager->showTheBalanceSheetForASpecificPeriod();
+    budgetMangager->showTheNalanceSheetOfASpecificPeriod();
 }
 void Budget::changeThePasswordOfTheLoggedInUser(){
-    userManager.changingThePasswordOfTheLoggedIInUser();
+    userManager.changeThePasswordOfTheLoggedInUser();
 }
 void Budget::userLogout(){
     userManager.userLogout();

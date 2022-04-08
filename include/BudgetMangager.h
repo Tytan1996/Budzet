@@ -3,14 +3,9 @@
 
 #include <iostream>
 #include <vector>
-#include <string>
-#include <algorithm>
 #include <windows.h>
 #include "FileWithExpense.h"
 #include "FileWithIncome.h"
-#include "Expense.h"
-#include "Income.h"
-#include "AuxiliaryMethods.h"
 
 using namespace std;
 
@@ -19,10 +14,10 @@ class BudgetMangager
 public:
         BudgetMangager(string incomeFileName, string expenseFileName,int idZaloganegoUzytkownika);
         void addAnExpense(); //dodajWydatek
-        void addIncome(); //dodajDochod
+        void addAnIncome(); //dodajDochod
         void showTheBalanceSheetForTheCurrentMonth();//pokazBilansZBiezacegoMiesiaca
-        void showTheBalanceSheetForThePreviousMonth();//pokazBilansZPoprzedniegoMiesiaca
-        void showTheBalanceSheetForASpecificPeriod();//pokazBilansZOkreslonegoOkresu
+        void showTheBalanceSheetForThePrevioustMonth();//pokazBilansZPoprzedniegoMiesiaca
+        void showTheNalanceSheetOfASpecificPeriod();//pokazBilansZOkreslonegoOkresu
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
     protected:

@@ -1,4 +1,6 @@
 #include "Files.h"
+#include <fstream>
+#include "User.h"
 
 Files::Files(string nameOfTheFileWithTheUsers):FILE_NAME(nameOfTheFileWithTheUsers){
 

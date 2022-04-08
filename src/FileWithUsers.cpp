@@ -1,4 +1,9 @@
 #include "FileWithUsers.h"
+#include <fstream>
+#include <stdio.h>
+
+#include "Markup.h"
+
 
 FileWithUsers::FileWithUsers(string nameOfTheFileWithTheUsers):Files(nameOfTheFileWithTheUsers){
 

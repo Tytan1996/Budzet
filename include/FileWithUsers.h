@@ -2,11 +2,8 @@
 #define FILEWITHUSERS_H
 
 #include <iostream>
-#include <fstream>
 #include <vector>
-#include <stdio.h>
 
-#include "Markup.h"
 #include "Files.h"
 #include "User.h"
 

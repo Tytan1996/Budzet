@@ -3,10 +3,9 @@
 
 #include <iostream>
 #include <vector>
+
 #include "Files.h"
 #include "Expense.h"
-#include "Markup.h"
-#include "AuxiliaryMethods.h"
 
 using namespace std;
 
